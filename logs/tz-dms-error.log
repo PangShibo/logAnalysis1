@@ -1,0 +1,27 @@
+2019-01-23 09:18:40,675 - [com.phone.etl.mr.EtlToHdfsRunner.main(EtlToHdfsRunner.java:112)] ERROR [com.phone.etl.mr.EtlToHdfsRunner] - etl异常
+java.lang.IllegalArgumentException: The value of property running_date must not be null
+	at com.google.common.base.Preconditions.checkArgument(Preconditions.java:92)
+	at org.apache.hadoop.conf.Configuration.set(Configuration.java:1134)
+	at org.apache.hadoop.conf.Configuration.set(Configuration.java:1115)
+	at com.phone.etl.mr.EtlToHdfsRunner.handleArgs(EtlToHdfsRunner.java:93)
+	at com.phone.etl.mr.EtlToHdfsRunner.run(EtlToHdfsRunner.java:26)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:70)
+	at com.phone.etl.mr.EtlToHdfsRunner.main(EtlToHdfsRunner.java:110)
+2019-01-23 21:53:01,415 - [com.phone.analysis.mr.nu.NewUserRunner.main(NewUserRunner.java:28)] ERROR [com.phone.analysis.mr.nu.NewUserRunner] - 添加hdfs失败
+java.lang.NullPointerException
+	at com.phone.analysis.mr.nu.NewUserRunner.setArgs(NewUserRunner.java:74)
+	at com.phone.analysis.mr.nu.NewUserRunner.run(NewUserRunner.java:39)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:70)
+	at com.phone.analysis.mr.nu.NewUserRunner.main(NewUserRunner.java:26)
+2019-01-23 21:53:43,405 - [com.phone.analysis.mr.nu.NewUserRunner.main(NewUserRunner.java:28)] ERROR [com.phone.analysis.mr.nu.NewUserRunner] - 添加hdfs失败
+java.lang.NullPointerException
+	at com.phone.analysis.mr.nu.NewUserRunner.setArgs(NewUserRunner.java:74)
+	at com.phone.analysis.mr.nu.NewUserRunner.run(NewUserRunner.java:39)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:70)
+	at com.phone.analysis.mr.nu.NewUserRunner.main(NewUserRunner.java:26)
+2019-02-12 14:23:57,965 - [com.phone.analysis.mr.nm.ActiveMemberRunner.main(ActiveMemberRunner.java:67)] ERROR [com.phone.etl.mr.EtlToHdfsRunner] - 执行输出到mysql异常
+java.lang.RuntimeException: 输入路径不存在/ods/02/11
+	at com.phone.util.InAndOutPathUtil.handleInputOutput(InAndOutPathUtil.java:41)
+	at com.phone.analysis.mr.nm.ActiveMemberRunner.run(ActiveMemberRunner.java:45)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:70)
+	at com.phone.analysis.mr.nm.ActiveMemberRunner.main(ActiveMemberRunner.java:65)

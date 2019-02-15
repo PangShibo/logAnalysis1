@@ -1,0 +1,799 @@
+2019-01-23 09:18:40,675 ERROR [com.phone.etl.mr.EtlToHdfsRunner] - etl异常
+java.lang.IllegalArgumentException: The value of property running_date must not be null
+	at com.google.common.base.Preconditions.checkArgument(Preconditions.java:92)
+	at org.apache.hadoop.conf.Configuration.set(Configuration.java:1134)
+	at org.apache.hadoop.conf.Configuration.set(Configuration.java:1115)
+	at com.phone.etl.mr.EtlToHdfsRunner.handleArgs(EtlToHdfsRunner.java:93)
+	at com.phone.etl.mr.EtlToHdfsRunner.run(EtlToHdfsRunner.java:26)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:70)
+	at com.phone.etl.mr.EtlToHdfsRunner.main(EtlToHdfsRunner.java:110)
+2019-01-23 09:19:44,148  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-01-23 09:21:42,485  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-01-23 14:00:31,312  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-01-23 14:00:34,920  WARN [org.apache.hadoop.mapred.LocalJobRunner] - job_local995514602_0001
+java.lang.Exception: java.io.FileNotFoundException: Path is not a file: /logs/01/21/03
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:70)
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:56)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocationsInt(FSNamesystem.java:2094)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:2064)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:1977)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.getBlockLocations(NameNodeRpcServer.java:575)
+	at org.apache.hadoop.hdfs.server.namenode.AuthorizationProviderProxyClientProtocol.getBlockLocations(AuthorizationProviderProxyClientProtocol.java:92)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.getBlockLocations(ClientNamenodeProtocolServerSideTranslatorPB.java:376)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:617)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:1073)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2226)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2222)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1920)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2220)
+
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.runTasks(LocalJobRunner.java:462)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:522)
+Caused by: java.io.FileNotFoundException: Path is not a file: /logs/01/21/03
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:70)
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:56)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocationsInt(FSNamesystem.java:2094)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:2064)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:1977)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.getBlockLocations(NameNodeRpcServer.java:575)
+	at org.apache.hadoop.hdfs.server.namenode.AuthorizationProviderProxyClientProtocol.getBlockLocations(AuthorizationProviderProxyClientProtocol.java:92)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.getBlockLocations(ClientNamenodeProtocolServerSideTranslatorPB.java:376)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:617)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:1073)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2226)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2222)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1920)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2220)
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.apache.hadoop.ipc.RemoteException.instantiateException(RemoteException.java:106)
+	at org.apache.hadoop.ipc.RemoteException.unwrapRemoteException(RemoteException.java:73)
+	at org.apache.hadoop.hdfs.DFSClient.callGetBlockLocations(DFSClient.java:1242)
+	at org.apache.hadoop.hdfs.DFSClient.getLocatedBlocks(DFSClient.java:1227)
+	at org.apache.hadoop.hdfs.DFSClient.getLocatedBlocks(DFSClient.java:1215)
+	at org.apache.hadoop.hdfs.DFSInputStream.fetchLocatedBlocksAndGetLastBlockLength(DFSInputStream.java:303)
+	at org.apache.hadoop.hdfs.DFSInputStream.openInfo(DFSInputStream.java:269)
+	at org.apache.hadoop.hdfs.DFSInputStream.<init>(DFSInputStream.java:261)
+	at org.apache.hadoop.hdfs.DFSClient.open(DFSClient.java:1540)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$3.doCall(DistributedFileSystem.java:304)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$3.doCall(DistributedFileSystem.java:299)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.open(DistributedFileSystem.java:312)
+	at org.apache.hadoop.fs.FileSystem.open(FileSystem.java:767)
+	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.initialize(LineRecordReader.java:85)
+	at org.apache.hadoop.mapred.MapTask$NewTrackingRecordReader.initialize(MapTask.java:548)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:786)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.hadoop.ipc.RemoteException(java.io.FileNotFoundException): Path is not a file: /logs/01/21/03
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:70)
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:56)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocationsInt(FSNamesystem.java:2094)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:2064)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:1977)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.getBlockLocations(NameNodeRpcServer.java:575)
+	at org.apache.hadoop.hdfs.server.namenode.AuthorizationProviderProxyClientProtocol.getBlockLocations(AuthorizationProviderProxyClientProtocol.java:92)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.getBlockLocations(ClientNamenodeProtocolServerSideTranslatorPB.java:376)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:617)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:1073)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2226)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2222)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1920)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2220)
+
+	at org.apache.hadoop.ipc.Client.call(Client.java:1476)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1407)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Invoker.invoke(ProtobufRpcEngine.java:229)
+	at com.sun.proxy.$Proxy9.getBlockLocations(Unknown Source)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolTranslatorPB.getBlockLocations(ClientNamenodeProtocolTranslatorPB.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:187)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:102)
+	at com.sun.proxy.$Proxy10.getBlockLocations(Unknown Source)
+	at org.apache.hadoop.hdfs.DFSClient.callGetBlockLocations(DFSClient.java:1240)
+	... 21 more
+2019-01-23 14:01:04,443  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-01-23 14:01:08,078  WARN [org.apache.hadoop.mapred.LocalJobRunner] - job_local1675054463_0001
+java.lang.Exception: java.io.FileNotFoundException: Path is not a file: /logs/01/21/03
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:70)
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:56)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocationsInt(FSNamesystem.java:2094)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:2064)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:1977)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.getBlockLocations(NameNodeRpcServer.java:575)
+	at org.apache.hadoop.hdfs.server.namenode.AuthorizationProviderProxyClientProtocol.getBlockLocations(AuthorizationProviderProxyClientProtocol.java:92)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.getBlockLocations(ClientNamenodeProtocolServerSideTranslatorPB.java:376)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:617)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:1073)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2226)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2222)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1920)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2220)
+
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.runTasks(LocalJobRunner.java:462)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:522)
+Caused by: java.io.FileNotFoundException: Path is not a file: /logs/01/21/03
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:70)
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:56)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocationsInt(FSNamesystem.java:2094)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:2064)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:1977)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.getBlockLocations(NameNodeRpcServer.java:575)
+	at org.apache.hadoop.hdfs.server.namenode.AuthorizationProviderProxyClientProtocol.getBlockLocations(AuthorizationProviderProxyClientProtocol.java:92)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.getBlockLocations(ClientNamenodeProtocolServerSideTranslatorPB.java:376)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:617)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:1073)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2226)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2222)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1920)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2220)
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.apache.hadoop.ipc.RemoteException.instantiateException(RemoteException.java:106)
+	at org.apache.hadoop.ipc.RemoteException.unwrapRemoteException(RemoteException.java:73)
+	at org.apache.hadoop.hdfs.DFSClient.callGetBlockLocations(DFSClient.java:1242)
+	at org.apache.hadoop.hdfs.DFSClient.getLocatedBlocks(DFSClient.java:1227)
+	at org.apache.hadoop.hdfs.DFSClient.getLocatedBlocks(DFSClient.java:1215)
+	at org.apache.hadoop.hdfs.DFSInputStream.fetchLocatedBlocksAndGetLastBlockLength(DFSInputStream.java:303)
+	at org.apache.hadoop.hdfs.DFSInputStream.openInfo(DFSInputStream.java:269)
+	at org.apache.hadoop.hdfs.DFSInputStream.<init>(DFSInputStream.java:261)
+	at org.apache.hadoop.hdfs.DFSClient.open(DFSClient.java:1540)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$3.doCall(DistributedFileSystem.java:304)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$3.doCall(DistributedFileSystem.java:299)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.open(DistributedFileSystem.java:312)
+	at org.apache.hadoop.fs.FileSystem.open(FileSystem.java:767)
+	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.initialize(LineRecordReader.java:85)
+	at org.apache.hadoop.mapred.MapTask$NewTrackingRecordReader.initialize(MapTask.java:548)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:786)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.hadoop.ipc.RemoteException(java.io.FileNotFoundException): Path is not a file: /logs/01/21/03
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:70)
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:56)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocationsInt(FSNamesystem.java:2094)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:2064)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:1977)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.getBlockLocations(NameNodeRpcServer.java:575)
+	at org.apache.hadoop.hdfs.server.namenode.AuthorizationProviderProxyClientProtocol.getBlockLocations(AuthorizationProviderProxyClientProtocol.java:92)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.getBlockLocations(ClientNamenodeProtocolServerSideTranslatorPB.java:376)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:617)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:1073)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2226)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2222)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1920)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2220)
+
+	at org.apache.hadoop.ipc.Client.call(Client.java:1476)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1407)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Invoker.invoke(ProtobufRpcEngine.java:229)
+	at com.sun.proxy.$Proxy9.getBlockLocations(Unknown Source)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolTranslatorPB.getBlockLocations(ClientNamenodeProtocolTranslatorPB.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:187)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:102)
+	at com.sun.proxy.$Proxy10.getBlockLocations(Unknown Source)
+	at org.apache.hadoop.hdfs.DFSClient.callGetBlockLocations(DFSClient.java:1240)
+	... 21 more
+2019-01-23 14:02:56,072  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-01-23 21:53:01,415 ERROR [com.phone.analysis.mr.nu.NewUserRunner] - 添加hdfs失败
+java.lang.NullPointerException
+	at com.phone.analysis.mr.nu.NewUserRunner.setArgs(NewUserRunner.java:74)
+	at com.phone.analysis.mr.nu.NewUserRunner.run(NewUserRunner.java:39)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:70)
+	at com.phone.analysis.mr.nu.NewUserRunner.main(NewUserRunner.java:26)
+2019-01-23 21:53:43,405 ERROR [com.phone.analysis.mr.nu.NewUserRunner] - 添加hdfs失败
+java.lang.NullPointerException
+	at com.phone.analysis.mr.nu.NewUserRunner.setArgs(NewUserRunner.java:74)
+	at com.phone.analysis.mr.nu.NewUserRunner.run(NewUserRunner.java:39)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:70)
+	at com.phone.analysis.mr.nu.NewUserRunner.main(NewUserRunner.java:26)
+2019-01-23 22:04:01,363  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-01-23 22:04:01,418  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-01-23 22:05:50,337  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-01-23 22:05:50,629  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-01-23 22:06:44,309  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-01-23 22:06:44,414  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-01-23 22:06:50,713  WARN [org.apache.hadoop.mapred.LocalJobRunner] - job_local334939831_0001
+java.lang.Exception: java.lang.ArrayIndexOutOfBoundsException: 2
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.runTasks(LocalJobRunner.java:462)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:522)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 2
+	at com.phone.analysis.mr.nu.NewUserMapper.map(NewUserMapper.java:34)
+	at com.phone.analysis.mr.nu.NewUserMapper.map(NewUserMapper.java:20)
+	at org.apache.hadoop.mapreduce.Mapper.run(Mapper.java:146)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:787)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2019-02-11 16:37:43,758  WARN [com.phone.analysis.mr.au.ActiveUserRunner] - NEW_USER TO MYSQL is failed !!!
+java.lang.RuntimeException: 输入路径不存在inpath/ods/02/10
+	at com.phone.analysis.mr.au.ActiveUserRunner.handleInputOutput(ActiveUserRunner.java:241)
+	at com.phone.analysis.mr.au.ActiveUserRunner.run(ActiveUserRunner.java:90)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:70)
+	at com.phone.analysis.mr.au.ActiveUserRunner.main(ActiveUserRunner.java:40)
+2019-02-11 16:40:56,530  WARN [com.phone.analysis.mr.nu.NewUserRunner] - NEW_USER TO MYSQL is failed !!!
+java.lang.RuntimeException: 输入路径不存在inpath/ods/02/10
+	at com.phone.analysis.mr.nu.NewUserRunner.handleInputOutput(NewUserRunner.java:244)
+	at com.phone.analysis.mr.nu.NewUserRunner.run(NewUserRunner.java:93)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:70)
+	at com.phone.analysis.mr.nu.NewUserRunner.main(NewUserRunner.java:43)
+2019-02-11 16:42:14,039  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-11 16:42:14,108  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-11 16:42:15,204  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in setupJob()
+2019-02-11 16:42:19,747  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in cleanupJob()
+2019-02-11 16:42:19,747  WARN [org.apache.hadoop.mapred.LocalJobRunner] - job_local262251892_0001
+java.lang.Exception: java.lang.ArrayIndexOutOfBoundsException: 2
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.runTasks(LocalJobRunner.java:462)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:522)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 2
+	at com.phone.analysis.mr.nu.NewUserMapper.map(NewUserMapper.java:34)
+	at com.phone.analysis.mr.nu.NewUserMapper.map(NewUserMapper.java:20)
+	at org.apache.hadoop.mapreduce.Mapper.run(Mapper.java:146)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:787)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2019-02-11 16:46:02,501  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-11 16:46:02,556  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-11 16:46:03,206  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in setupJob()
+2019-02-11 16:46:05,974  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in cleanupJob()
+2019-02-11 16:46:05,975  WARN [org.apache.hadoop.mapred.LocalJobRunner] - job_local2028201075_0001
+java.lang.Exception: java.lang.ArrayIndexOutOfBoundsException: 2
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.runTasks(LocalJobRunner.java:462)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:522)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 2
+	at com.phone.analysis.mr.nu.NewUserMapper.map(NewUserMapper.java:34)
+	at com.phone.analysis.mr.nu.NewUserMapper.map(NewUserMapper.java:20)
+	at org.apache.hadoop.mapreduce.Mapper.run(Mapper.java:146)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:787)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2019-02-11 16:47:49,764  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-11 16:47:49,807  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-11 16:47:50,437  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in setupJob()
+2019-02-11 16:47:53,383  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in cleanupJob()
+2019-02-11 16:47:53,383  WARN [org.apache.hadoop.mapred.LocalJobRunner] - job_local1855627181_0001
+java.lang.Exception: java.lang.ArrayIndexOutOfBoundsException: 2
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.runTasks(LocalJobRunner.java:462)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:522)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 2
+	at com.phone.analysis.mr.nu.NewUserMapper.map(NewUserMapper.java:34)
+	at com.phone.analysis.mr.nu.NewUserMapper.map(NewUserMapper.java:20)
+	at org.apache.hadoop.mapreduce.Mapper.run(Mapper.java:146)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:787)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2019-02-11 17:00:46,727  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-11 17:00:46,773  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-11 17:00:47,359  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in setupJob()
+2019-02-11 17:00:49,877  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in cleanupJob()
+2019-02-11 17:00:49,878  WARN [org.apache.hadoop.mapred.LocalJobRunner] - job_local20996895_0001
+java.lang.Exception: java.lang.ArrayIndexOutOfBoundsException: 2
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.runTasks(LocalJobRunner.java:462)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:522)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 2
+	at com.phone.analysis.mr.nu.NewUserMapper.map(NewUserMapper.java:34)
+	at com.phone.analysis.mr.nu.NewUserMapper.map(NewUserMapper.java:20)
+	at org.apache.hadoop.mapreduce.Mapper.run(Mapper.java:146)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:787)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2019-02-11 17:02:41,460  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-11 17:02:41,499  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-11 17:02:42,074  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in setupJob()
+2019-02-11 17:02:45,034  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in cleanupJob()
+2019-02-11 17:02:45,035  WARN [org.apache.hadoop.mapred.LocalJobRunner] - job_local1120432628_0001
+java.lang.Exception: java.lang.NullPointerException
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.runTasks(LocalJobRunner.java:462)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:522)
+Caused by: java.lang.NullPointerException
+	at java.io.DataOutputStream.writeUTF(DataOutputStream.java:347)
+	at java.io.DataOutputStream.writeUTF(DataOutputStream.java:323)
+	at com.phone.analysis.mr.model.base.KpiDimension.write(KpiDimension.java:83)
+	at com.phone.analysis.mr.model.key.StatsCommonDimension.write(StatsCommonDimension.java:37)
+	at com.phone.analysis.mr.model.key.StatsUserDimension.write(StatsUserDimension.java:77)
+	at org.apache.hadoop.io.serializer.WritableSerialization$WritableSerializer.serialize(WritableSerialization.java:98)
+	at org.apache.hadoop.io.serializer.WritableSerialization$WritableSerializer.serialize(WritableSerialization.java:82)
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.collect(MapTask.java:1149)
+	at org.apache.hadoop.mapred.MapTask$NewOutputCollector.write(MapTask.java:715)
+	at org.apache.hadoop.mapreduce.task.TaskInputOutputContextImpl.write(TaskInputOutputContextImpl.java:89)
+	at org.apache.hadoop.mapreduce.lib.map.WrappedMapper$Context.write(WrappedMapper.java:112)
+	at com.phone.analysis.mr.nu.NewUserMapper.map(NewUserMapper.java:60)
+	at com.phone.analysis.mr.nu.NewUserMapper.map(NewUserMapper.java:20)
+	at org.apache.hadoop.mapreduce.Mapper.run(Mapper.java:146)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:787)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2019-02-11 17:03:45,475  WARN [com.phone.analysis.mr.au.ActiveUserRunner] - NEW_USER TO MYSQL is failed !!!
+java.lang.RuntimeException: 输入路径不存在inpath/ods/02/10
+	at com.phone.analysis.mr.au.ActiveUserRunner.handleInputOutput(ActiveUserRunner.java:241)
+	at com.phone.analysis.mr.au.ActiveUserRunner.run(ActiveUserRunner.java:90)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:70)
+	at com.phone.analysis.mr.au.ActiveUserRunner.main(ActiveUserRunner.java:40)
+2019-02-11 17:04:31,888  WARN [com.phone.analysis.mr.au.ActiveUserRunner] - NEW_USER TO MYSQL is failed !!!
+java.lang.RuntimeException: 输入路径不存在inpath/ods/01/22
+	at com.phone.analysis.mr.au.ActiveUserRunner.handleInputOutput(ActiveUserRunner.java:241)
+	at com.phone.analysis.mr.au.ActiveUserRunner.run(ActiveUserRunner.java:90)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:70)
+	at com.phone.analysis.mr.au.ActiveUserRunner.main(ActiveUserRunner.java:40)
+2019-02-11 17:04:54,363  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-11 17:04:54,426  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-11 17:04:54,987  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in setupJob()
+2019-02-11 17:04:57,488  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in cleanupJob()
+2019-02-11 17:04:57,489  WARN [org.apache.hadoop.mapred.LocalJobRunner] - job_local2104397124_0001
+java.lang.Exception: java.lang.ArrayIndexOutOfBoundsException: 2
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.runTasks(LocalJobRunner.java:462)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:522)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 2
+	at com.phone.analysis.mr.au.ActiveUserMapper.map(ActiveUserMapper.java:34)
+	at com.phone.analysis.mr.au.ActiveUserMapper.map(ActiveUserMapper.java:20)
+	at org.apache.hadoop.mapreduce.Mapper.run(Mapper.java:146)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:787)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2019-02-11 17:33:46,939  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-11 17:33:47,058  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-11 17:33:47,952  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in setupJob()
+2019-02-11 17:33:50,613  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in cleanupJob()
+2019-02-11 17:33:50,614  WARN [org.apache.hadoop.mapred.LocalJobRunner] - job_local1500399707_0001
+java.lang.Exception: java.lang.ArrayIndexOutOfBoundsException: 2
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.runTasks(LocalJobRunner.java:462)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:522)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 2
+	at com.phone.analysis.mr.au.ActiveUserMapper.map(ActiveUserMapper.java:34)
+	at com.phone.analysis.mr.au.ActiveUserMapper.map(ActiveUserMapper.java:20)
+	at org.apache.hadoop.mapreduce.Mapper.run(Mapper.java:146)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:787)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2019-02-11 17:41:38,503  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-11 17:41:38,551  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-11 17:41:39,133  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in setupJob()
+2019-02-11 17:41:41,560  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in cleanupJob()
+2019-02-11 17:41:41,561  WARN [org.apache.hadoop.mapred.LocalJobRunner] - job_local394217717_0001
+java.lang.Exception: java.lang.ArrayIndexOutOfBoundsException: 2
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.runTasks(LocalJobRunner.java:462)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:522)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 2
+	at com.phone.analysis.mr.au.ActiveUserMapper.map(ActiveUserMapper.java:34)
+	at com.phone.analysis.mr.au.ActiveUserMapper.map(ActiveUserMapper.java:20)
+	at org.apache.hadoop.mapreduce.Mapper.run(Mapper.java:146)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:787)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2019-02-11 17:43:59,226  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-11 17:43:59,290  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-11 17:43:59,849  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in setupJob()
+2019-02-11 17:44:02,121  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in cleanupJob()
+2019-02-11 17:44:02,123  WARN [org.apache.hadoop.mapred.LocalJobRunner] - job_local602845561_0001
+java.lang.Exception: java.lang.ArrayIndexOutOfBoundsException: 2
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.runTasks(LocalJobRunner.java:462)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:522)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 2
+	at com.phone.analysis.mr.au.ActiveUserMapper.map(ActiveUserMapper.java:42)
+	at com.phone.analysis.mr.au.ActiveUserMapper.map(ActiveUserMapper.java:24)
+	at org.apache.hadoop.mapreduce.Mapper.run(Mapper.java:146)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:787)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2019-02-11 17:49:22,491  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-11 17:49:22,536  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-11 17:49:23,125  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in setupJob()
+2019-02-11 17:49:25,909  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in cleanupJob()
+2019-02-11 17:49:25,910  WARN [org.apache.hadoop.mapred.LocalJobRunner] - job_local673350590_0001
+java.lang.Exception: java.lang.ArrayIndexOutOfBoundsException: 2
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.runTasks(LocalJobRunner.java:462)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:522)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 2
+	at com.phone.analysis.mr.au.AcitveUserMapper.map(AcitveUserMapper.java:42)
+	at com.phone.analysis.mr.au.AcitveUserMapper.map(AcitveUserMapper.java:24)
+	at org.apache.hadoop.mapreduce.Mapper.run(Mapper.java:146)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:787)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2019-02-11 17:49:56,576  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-11 17:49:56,623  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-11 17:49:57,253  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in setupJob()
+2019-02-11 17:50:01,883  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in commitJob()
+2019-02-11 17:55:46,565  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-11 17:55:46,628  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-11 17:55:47,309  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in setupJob()
+2019-02-11 17:55:50,768  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in cleanupJob()
+2019-02-11 17:55:50,769  WARN [org.apache.hadoop.mapred.LocalJobRunner] - job_local1096350095_0001
+java.lang.Exception: java.lang.NullPointerException
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.runTasks(LocalJobRunner.java:462)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:522)
+Caused by: java.lang.NullPointerException
+	at java.io.DataOutputStream.writeUTF(DataOutputStream.java:347)
+	at java.io.DataOutputStream.writeUTF(DataOutputStream.java:323)
+	at com.phone.analysis.mr.model.base.KpiDimension.write(KpiDimension.java:83)
+	at com.phone.analysis.mr.model.key.StatsCommonDimension.write(StatsCommonDimension.java:37)
+	at com.phone.analysis.mr.model.key.StatsUserDimension.write(StatsUserDimension.java:77)
+	at org.apache.hadoop.io.serializer.WritableSerialization$WritableSerializer.serialize(WritableSerialization.java:98)
+	at org.apache.hadoop.io.serializer.WritableSerialization$WritableSerializer.serialize(WritableSerialization.java:82)
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.collect(MapTask.java:1149)
+	at org.apache.hadoop.mapred.MapTask$NewOutputCollector.write(MapTask.java:715)
+	at org.apache.hadoop.mapreduce.task.TaskInputOutputContextImpl.write(TaskInputOutputContextImpl.java:89)
+	at org.apache.hadoop.mapreduce.lib.map.WrappedMapper$Context.write(WrappedMapper.java:112)
+	at com.phone.analysis.mr.nu.NewUserMapper.map(NewUserMapper.java:60)
+	at com.phone.analysis.mr.nu.NewUserMapper.map(NewUserMapper.java:20)
+	at org.apache.hadoop.mapreduce.Mapper.run(Mapper.java:146)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:787)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2019-02-11 17:57:06,333  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-11 17:57:06,374  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-11 17:57:06,967  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in setupJob()
+2019-02-11 17:57:09,813  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in cleanupJob()
+2019-02-11 17:57:09,815  WARN [org.apache.hadoop.mapred.LocalJobRunner] - job_local1874336278_0001
+java.lang.Exception: java.lang.NullPointerException
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.runTasks(LocalJobRunner.java:462)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:522)
+Caused by: java.lang.NullPointerException
+	at java.io.DataOutputStream.writeUTF(DataOutputStream.java:347)
+	at java.io.DataOutputStream.writeUTF(DataOutputStream.java:323)
+	at com.phone.analysis.mr.model.base.KpiDimension.write(KpiDimension.java:83)
+	at com.phone.analysis.mr.model.key.StatsCommonDimension.write(StatsCommonDimension.java:37)
+	at com.phone.analysis.mr.model.key.StatsUserDimension.write(StatsUserDimension.java:77)
+	at org.apache.hadoop.io.serializer.WritableSerialization$WritableSerializer.serialize(WritableSerialization.java:98)
+	at org.apache.hadoop.io.serializer.WritableSerialization$WritableSerializer.serialize(WritableSerialization.java:82)
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.collect(MapTask.java:1149)
+	at org.apache.hadoop.mapred.MapTask$NewOutputCollector.write(MapTask.java:715)
+	at org.apache.hadoop.mapreduce.task.TaskInputOutputContextImpl.write(TaskInputOutputContextImpl.java:89)
+	at org.apache.hadoop.mapreduce.lib.map.WrappedMapper$Context.write(WrappedMapper.java:112)
+	at com.phone.analysis.mr.nu.NewUserMapper.map(NewUserMapper.java:60)
+	at com.phone.analysis.mr.nu.NewUserMapper.map(NewUserMapper.java:20)
+	at org.apache.hadoop.mapreduce.Mapper.run(Mapper.java:146)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:787)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2019-02-12 09:39:29,829  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-12 09:39:29,901  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-12 09:39:31,061  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in setupJob()
+2019-02-12 09:39:34,962  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in cleanupJob()
+2019-02-12 09:39:34,964  WARN [org.apache.hadoop.mapred.LocalJobRunner] - job_local1058512454_0001
+java.lang.Exception: java.lang.NullPointerException
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.runTasks(LocalJobRunner.java:462)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:522)
+Caused by: java.lang.NullPointerException
+	at java.io.DataOutputStream.writeUTF(DataOutputStream.java:347)
+	at java.io.DataOutputStream.writeUTF(DataOutputStream.java:323)
+	at com.phone.analysis.mr.model.base.KpiDimension.write(KpiDimension.java:83)
+	at com.phone.analysis.mr.model.key.StatsCommonDimension.write(StatsCommonDimension.java:37)
+	at com.phone.analysis.mr.model.key.StatsUserDimension.write(StatsUserDimension.java:77)
+	at org.apache.hadoop.io.serializer.WritableSerialization$WritableSerializer.serialize(WritableSerialization.java:98)
+	at org.apache.hadoop.io.serializer.WritableSerialization$WritableSerializer.serialize(WritableSerialization.java:82)
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.collect(MapTask.java:1149)
+	at org.apache.hadoop.mapred.MapTask$NewOutputCollector.write(MapTask.java:715)
+	at org.apache.hadoop.mapreduce.task.TaskInputOutputContextImpl.write(TaskInputOutputContextImpl.java:89)
+	at org.apache.hadoop.mapreduce.lib.map.WrappedMapper$Context.write(WrappedMapper.java:112)
+	at com.phone.analysis.mr.nu.NewUserMapper.map(NewUserMapper.java:60)
+	at com.phone.analysis.mr.nu.NewUserMapper.map(NewUserMapper.java:20)
+	at org.apache.hadoop.mapreduce.Mapper.run(Mapper.java:146)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:787)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2019-02-12 09:41:32,514  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-12 09:41:32,552  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-12 09:41:33,138  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in setupJob()
+2019-02-12 09:41:38,269  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in cleanupJob()
+2019-02-12 09:41:38,271  WARN [org.apache.hadoop.mapred.LocalJobRunner] - job_local1465429132_0001
+java.lang.Exception: java.lang.NullPointerException
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.runTasks(LocalJobRunner.java:462)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:522)
+Caused by: java.lang.NullPointerException
+	at java.io.DataOutputStream.writeUTF(DataOutputStream.java:347)
+	at java.io.DataOutputStream.writeUTF(DataOutputStream.java:323)
+	at com.phone.analysis.mr.model.base.KpiDimension.write(KpiDimension.java:83)
+	at com.phone.analysis.mr.model.key.StatsCommonDimension.write(StatsCommonDimension.java:37)
+	at com.phone.analysis.mr.model.key.StatsUserDimension.write(StatsUserDimension.java:77)
+	at org.apache.hadoop.io.serializer.WritableSerialization$WritableSerializer.serialize(WritableSerialization.java:98)
+	at org.apache.hadoop.io.serializer.WritableSerialization$WritableSerializer.serialize(WritableSerialization.java:82)
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.collect(MapTask.java:1149)
+	at org.apache.hadoop.mapred.MapTask$NewOutputCollector.write(MapTask.java:715)
+	at org.apache.hadoop.mapreduce.task.TaskInputOutputContextImpl.write(TaskInputOutputContextImpl.java:89)
+	at org.apache.hadoop.mapreduce.lib.map.WrappedMapper$Context.write(WrappedMapper.java:112)
+	at com.phone.analysis.mr.nu.NewUserMapper.map(NewUserMapper.java:60)
+	at com.phone.analysis.mr.nu.NewUserMapper.map(NewUserMapper.java:20)
+	at org.apache.hadoop.mapreduce.Mapper.run(Mapper.java:146)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:787)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2019-02-12 14:23:57,965 ERROR [com.phone.etl.mr.EtlToHdfsRunner] - 执行输出到mysql异常
+java.lang.RuntimeException: 输入路径不存在/ods/02/11
+	at com.phone.util.InAndOutPathUtil.handleInputOutput(InAndOutPathUtil.java:41)
+	at com.phone.analysis.mr.nm.ActiveMemberRunner.run(ActiveMemberRunner.java:45)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:70)
+	at com.phone.analysis.mr.nm.ActiveMemberRunner.main(ActiveMemberRunner.java:65)
+2019-02-12 14:24:34,903  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-12 14:24:35,508  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in setupJob()
+2019-02-12 14:24:40,197  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in commitJob()
+2019-02-12 14:28:28,157  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-12 14:28:28,711  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in setupJob()
+2019-02-12 14:28:32,595  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in commitJob()
+2019-02-12 20:38:30,041  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-12 20:38:30,118  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-12 20:38:30,755  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in setupJob()
+2019-02-12 20:38:33,950  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in cleanupJob()
+2019-02-12 20:38:33,952  WARN [org.apache.hadoop.mapred.LocalJobRunner] - job_local53807353_0001
+java.lang.Exception: java.lang.NullPointerException
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.runTasks(LocalJobRunner.java:462)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:522)
+Caused by: java.lang.NullPointerException
+	at java.io.DataOutputStream.writeUTF(DataOutputStream.java:347)
+	at java.io.DataOutputStream.writeUTF(DataOutputStream.java:323)
+	at com.phone.analysis.mr.model.base.KpiDimension.write(KpiDimension.java:83)
+	at com.phone.analysis.mr.model.key.StatsCommonDimension.write(StatsCommonDimension.java:37)
+	at com.phone.analysis.mr.model.key.StatsUserDimension.write(StatsUserDimension.java:77)
+	at org.apache.hadoop.io.serializer.WritableSerialization$WritableSerializer.serialize(WritableSerialization.java:98)
+	at org.apache.hadoop.io.serializer.WritableSerialization$WritableSerializer.serialize(WritableSerialization.java:82)
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.collect(MapTask.java:1149)
+	at org.apache.hadoop.mapred.MapTask$NewOutputCollector.write(MapTask.java:715)
+	at org.apache.hadoop.mapreduce.task.TaskInputOutputContextImpl.write(TaskInputOutputContextImpl.java:89)
+	at org.apache.hadoop.mapreduce.lib.map.WrappedMapper$Context.write(WrappedMapper.java:112)
+	at com.phone.analysis.mr.nu.NewUserMapper.map(NewUserMapper.java:60)
+	at com.phone.analysis.mr.nu.NewUserMapper.map(NewUserMapper.java:20)
+	at org.apache.hadoop.mapreduce.Mapper.run(Mapper.java:146)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:787)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2019-02-12 20:44:50,807  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-12 20:44:50,854  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-12 20:44:51,497  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in setupJob()
+2019-02-12 20:44:54,319  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in cleanupJob()
+2019-02-12 20:44:54,320  WARN [org.apache.hadoop.mapred.LocalJobRunner] - job_local574248386_0001
+java.lang.Exception: java.lang.NullPointerException
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.runTasks(LocalJobRunner.java:462)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:522)
+Caused by: java.lang.NullPointerException
+	at java.io.DataOutputStream.writeUTF(DataOutputStream.java:347)
+	at java.io.DataOutputStream.writeUTF(DataOutputStream.java:323)
+	at com.phone.analysis.mr.model.base.KpiDimension.write(KpiDimension.java:83)
+	at com.phone.analysis.mr.model.key.StatsCommonDimension.write(StatsCommonDimension.java:37)
+	at com.phone.analysis.mr.model.key.StatsUserDimension.write(StatsUserDimension.java:77)
+	at org.apache.hadoop.io.serializer.WritableSerialization$WritableSerializer.serialize(WritableSerialization.java:98)
+	at org.apache.hadoop.io.serializer.WritableSerialization$WritableSerializer.serialize(WritableSerialization.java:82)
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.collect(MapTask.java:1149)
+	at org.apache.hadoop.mapred.MapTask$NewOutputCollector.write(MapTask.java:715)
+	at org.apache.hadoop.mapreduce.task.TaskInputOutputContextImpl.write(TaskInputOutputContextImpl.java:89)
+	at org.apache.hadoop.mapreduce.lib.map.WrappedMapper$Context.write(WrappedMapper.java:112)
+	at com.phone.analysis.mr.nu.NewUserMapper.map(NewUserMapper.java:60)
+	at com.phone.analysis.mr.nu.NewUserMapper.map(NewUserMapper.java:20)
+	at org.apache.hadoop.mapreduce.Mapper.run(Mapper.java:146)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:787)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2019-02-12 20:46:11,739  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-12 20:46:11,786  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-12 20:46:12,386  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in setupJob()
+2019-02-12 20:46:15,395  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in cleanupJob()
+2019-02-12 20:46:15,397  WARN [org.apache.hadoop.mapred.LocalJobRunner] - job_local1277763928_0001
+java.lang.Exception: java.lang.NullPointerException
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.runTasks(LocalJobRunner.java:462)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:522)
+Caused by: java.lang.NullPointerException
+	at java.io.DataOutputStream.writeUTF(DataOutputStream.java:347)
+	at java.io.DataOutputStream.writeUTF(DataOutputStream.java:323)
+	at com.phone.analysis.mr.model.base.KpiDimension.write(KpiDimension.java:83)
+	at com.phone.analysis.mr.model.key.StatsCommonDimension.write(StatsCommonDimension.java:44)
+	at com.phone.analysis.mr.model.key.StatsUserDimension.write(StatsUserDimension.java:83)
+	at org.apache.hadoop.io.serializer.WritableSerialization$WritableSerializer.serialize(WritableSerialization.java:98)
+	at org.apache.hadoop.io.serializer.WritableSerialization$WritableSerializer.serialize(WritableSerialization.java:82)
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.collect(MapTask.java:1149)
+	at org.apache.hadoop.mapred.MapTask$NewOutputCollector.write(MapTask.java:715)
+	at org.apache.hadoop.mapreduce.task.TaskInputOutputContextImpl.write(TaskInputOutputContextImpl.java:89)
+	at org.apache.hadoop.mapreduce.lib.map.WrappedMapper$Context.write(WrappedMapper.java:112)
+	at com.phone.analysis.mr.nu.NewUserMapper.map(NewUserMapper.java:60)
+	at com.phone.analysis.mr.nu.NewUserMapper.map(NewUserMapper.java:20)
+	at org.apache.hadoop.mapreduce.Mapper.run(Mapper.java:146)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:787)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2019-02-12 20:47:15,851  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-12 20:47:15,945  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-12 20:47:16,778  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in setupJob()
+2019-02-12 20:47:20,165  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in cleanupJob()
+2019-02-12 20:47:20,166  WARN [org.apache.hadoop.mapred.LocalJobRunner] - job_local128041451_0001
+java.lang.Exception: java.lang.NullPointerException
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.runTasks(LocalJobRunner.java:462)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:522)
+Caused by: java.lang.NullPointerException
+	at java.io.DataOutputStream.writeUTF(DataOutputStream.java:347)
+	at java.io.DataOutputStream.writeUTF(DataOutputStream.java:323)
+	at com.phone.analysis.mr.model.base.KpiDimension.write(KpiDimension.java:84)
+	at com.phone.analysis.mr.model.key.StatsCommonDimension.write(StatsCommonDimension.java:44)
+	at com.phone.analysis.mr.model.key.StatsUserDimension.write(StatsUserDimension.java:83)
+	at org.apache.hadoop.io.serializer.WritableSerialization$WritableSerializer.serialize(WritableSerialization.java:98)
+	at org.apache.hadoop.io.serializer.WritableSerialization$WritableSerializer.serialize(WritableSerialization.java:82)
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.collect(MapTask.java:1149)
+	at org.apache.hadoop.mapred.MapTask$NewOutputCollector.write(MapTask.java:715)
+	at org.apache.hadoop.mapreduce.task.TaskInputOutputContextImpl.write(TaskInputOutputContextImpl.java:89)
+	at org.apache.hadoop.mapreduce.lib.map.WrappedMapper$Context.write(WrappedMapper.java:112)
+	at com.phone.analysis.mr.nu.NewUserMapper.map(NewUserMapper.java:60)
+	at com.phone.analysis.mr.nu.NewUserMapper.map(NewUserMapper.java:20)
+	at org.apache.hadoop.mapreduce.Mapper.run(Mapper.java:146)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:787)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2019-02-12 20:49:25,745  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-12 20:49:25,797  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-12 20:49:26,378  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in setupJob()
+2019-02-12 20:49:30,294  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in commitJob()
+2019-02-12 20:54:36,226  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-12 20:54:36,274  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-12 20:54:36,841  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in setupJob()
+2019-02-12 20:54:40,642  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in commitJob()
+2019-02-12 20:57:51,828  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-12 20:57:51,870  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-12 20:57:52,461  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in setupJob()
+2019-02-12 20:57:56,182  WARN [com.phone.analysis.mr.nu.NewUserOutputWritter] - 给ps赋值失败！！！
+2019-02-12 20:57:56,183  WARN [com.phone.analysis.mr.nu.NewUserOutputWritter] - 给ps赋值失败！！！
+2019-02-12 20:57:56,183  WARN [com.phone.analysis.mr.nu.NewUserOutputWritter] - 给ps赋值失败！！！
+2019-02-12 20:57:56,183  WARN [com.phone.analysis.mr.nu.NewUserOutputWritter] - 给ps赋值失败！！！
+2019-02-12 20:57:56,201  WARN [com.phone.analysis.mr.nu.NewUserOutputWritter] - 给ps赋值失败！！！
+2019-02-12 20:57:56,201  WARN [com.phone.analysis.mr.nu.NewUserOutputWritter] - 给ps赋值失败！！！
+2019-02-12 20:57:56,316  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in commitJob()
+2019-02-12 21:00:49,664  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-12 21:00:49,707  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-12 21:00:50,328  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in setupJob()
+2019-02-12 21:00:54,043  WARN [com.phone.analysis.mr.nu.NewUserOutputWritter] - 给ps赋值失败！！！
+2019-02-12 21:00:54,044  WARN [com.phone.analysis.mr.nu.NewUserOutputWritter] - 给ps赋值失败！！！
+2019-02-12 21:00:54,044  WARN [com.phone.analysis.mr.nu.NewUserOutputWritter] - 给ps赋值失败！！！
+2019-02-12 21:00:54,045  WARN [com.phone.analysis.mr.nu.NewUserOutputWritter] - 给ps赋值失败！！！
+2019-02-12 21:00:54,061  WARN [com.phone.analysis.mr.nu.NewUserOutputWritter] - 给ps赋值失败！！！
+2019-02-12 21:00:54,062  WARN [com.phone.analysis.mr.nu.NewUserOutputWritter] - 给ps赋值失败！！！
+2019-02-12 21:00:54,178  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in commitJob()
+2019-02-12 21:05:09,347  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-12 21:05:09,388  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-12 21:05:10,024  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in setupJob()
+2019-02-12 21:05:13,753  WARN [com.phone.analysis.mr.nu.NewUserWritter] - 给ps赋值失败！！！
+2019-02-12 21:05:13,753  WARN [com.phone.analysis.mr.nu.NewUserWritter] - 给ps赋值失败！！！
+2019-02-12 21:05:13,754  WARN [com.phone.analysis.mr.nu.NewUserWritter] - 给ps赋值失败！！！
+2019-02-12 21:05:13,754  WARN [com.phone.analysis.mr.nu.NewUserWritter] - 给ps赋值失败！！！
+2019-02-12 21:05:13,764  WARN [com.phone.analysis.mr.nu.NewUserWritter] - 给ps赋值失败！！！
+2019-02-12 21:05:13,765  WARN [com.phone.analysis.mr.nu.NewUserWritter] - 给ps赋值失败！！！
+2019-02-12 21:05:13,932  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in commitJob()
+2019-02-12 22:00:54,429  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-12 22:00:54,468  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-12 22:00:55,038  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in setupJob()
+2019-02-12 22:01:00,265  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in commitJob()
+2019-02-12 22:01:41,328  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-12 22:01:41,377  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-12 22:01:42,002  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in setupJob()
+2019-02-12 22:01:46,799  WARN [org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter] - Output Path is null in commitJob()
+2019-02-13 20:28:07,770  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-13 20:28:49,901  WARN [org.apache.hadoop.mapreduce.JobResourceUploader] - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).

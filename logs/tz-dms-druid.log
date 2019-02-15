@@ -1,0 +1,9 @@
+[druid] 2019-02-13 20:28:06,336 [main           ] INFO  conf.Configuration.deprecation {1} - session.id is deprecated. Instead, use dfs.metrics.session-id
+   [druid] 2019-02-13 20:28:06,360 [main           ] INFO  .hadoop.metrics.jvm.JvmMetrics {1} - Initializing JVM Metrics with processName=JobTracker, sessionId=
+   [druid] 2019-02-13 20:28:07,770 [main           ] WARN  .mapreduce.JobResourceUploader {1} - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+   [druid] 2019-02-13 20:28:27,909 [main           ] INFO  org.apache.hadoop.ipc.Client   {1} - Retrying connect to server: min1/192.168.216.6:8020. Already tried 0 time(s); maxRetries=45
+   [druid] 2019-02-13 20:28:48,995 [main           ] INFO  conf.Configuration.deprecation {1} - session.id is deprecated. Instead, use dfs.metrics.session-id
+   [druid] 2019-02-13 20:28:49,003 [main           ] INFO  .hadoop.metrics.jvm.JvmMetrics {1} - Initializing JVM Metrics with processName=JobTracker, sessionId=
+   [druid] 2019-02-13 20:28:49,901 [main           ] WARN  .mapreduce.JobResourceUploader {1} - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+   [druid] 2019-02-13 20:29:09,972 [main           ] INFO  org.apache.hadoop.ipc.Client   {1} - Retrying connect to server: min1/192.168.216.6:8020. Already tried 0 time(s); maxRetries=45
+   

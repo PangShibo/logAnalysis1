@@ -1,0 +1,1094 @@
+[druid] 2019-01-23 09:18:40,675 [main           ] ERROR m.phone.etl.mr.EtlToHdfsRunner {1} - etl异常
+   java.lang.IllegalArgumentException: The value of property running_date must not be null
+	at com.google.common.base.Preconditions.checkArgument(Preconditions.java:92)
+	at org.apache.hadoop.conf.Configuration.set(Configuration.java:1134)
+	at org.apache.hadoop.conf.Configuration.set(Configuration.java:1115)
+	at com.phone.etl.mr.EtlToHdfsRunner.handleArgs(EtlToHdfsRunner.java:93)
+	at com.phone.etl.mr.EtlToHdfsRunner.run(EtlToHdfsRunner.java:26)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:70)
+	at com.phone.etl.mr.EtlToHdfsRunner.main(EtlToHdfsRunner.java:110)
+[druid] 2019-01-23 09:19:42,841 [main           ] INFO  conf.Configuration.deprecation {1} - session.id is deprecated. Instead, use dfs.metrics.session-id
+   [druid] 2019-01-23 09:19:42,844 [main           ] INFO  .hadoop.metrics.jvm.JvmMetrics {1} - Initializing JVM Metrics with processName=JobTracker, sessionId=
+   [druid] 2019-01-23 09:19:44,148 [main           ] WARN  .mapreduce.JobResourceUploader {1} - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+   [druid] 2019-01-23 09:19:44,368 [main           ] INFO  duce.lib.input.FileInputFormat {1} - Total input paths to process : 6
+   [druid] 2019-01-23 09:19:44,531 [main           ] INFO  .hadoop.mapreduce.JobSubmitter {1} - number of splits:6
+   [druid] 2019-01-23 09:19:44,888 [main           ] INFO  .hadoop.mapreduce.JobSubmitter {1} - Submitting tokens for job: job_local1231562817_0001
+   [druid] 2019-01-23 09:19:45,226 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} - The url to track the job: http://localhost:8080/
+   [druid] 2019-01-23 09:19:45,227 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} - Running job: job_local1231562817_0001
+   [druid] 2019-01-23 09:19:45,252 [Thread-4       ] INFO  e.hadoop.mapred.LocalJobRunner {1} - OutputCommitter set in config null
+   [druid] 2019-01-23 09:19:45,265 [Thread-4       ] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 09:19:45,269 [Thread-4       ] INFO  e.hadoop.mapred.LocalJobRunner {1} - OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+   [druid] 2019-01-23 09:19:45,438 [Thread-4       ] INFO  e.hadoop.mapred.LocalJobRunner {1} - Waiting for map tasks
+   [druid] 2019-01-23 09:19:45,439 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local1231562817_0001_m_000000_0
+   [druid] 2019-01-23 09:19:45,584 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 09:19:45,610 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 09:19:46,232 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} - Job job_local1231562817_0001 running in uber mode : false
+   [druid] 2019-01-23 09:19:46,302 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} -  map 0% reduce 0%
+   [druid] 2019-01-23 09:19:46,395 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@51a0b017
+   [druid] 2019-01-23 09:19:46,402 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/qf-17.1548064244531.log:0+30434
+   [druid] 2019-01-23 09:19:48,052 [ask Executor #0] INFO  m.phone.etl.mr.EtlToHdfsMapper {1} - 输入：62输出：62过滤：0
+   [druid] 2019-01-23 09:19:48,063 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 09:19:48,867 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task:attempt_local1231562817_0001_m_000000_0 is done. And is in the process of committing
+   [druid] 2019-01-23 09:19:48,898 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 09:19:48,898 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task attempt_local1231562817_0001_m_000000_0 is allowed to commit now
+   [druid] 2019-01-23 09:19:48,929 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - Saved output of task 'attempt_local1231562817_0001_m_000000_0' to hdfs://min1:8020/ods/01/21/_temporary/0/task_local1231562817_0001_m_000000
+   [druid] 2019-01-23 09:19:48,931 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - map
+   [druid] 2019-01-23 09:19:48,931 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task 'attempt_local1231562817_0001_m_000000_0' done.
+   [druid] 2019-01-23 09:19:48,931 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Finishing task: attempt_local1231562817_0001_m_000000_0
+   [druid] 2019-01-23 09:19:48,931 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local1231562817_0001_m_000001_0
+   [druid] 2019-01-23 09:19:48,933 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 09:19:48,933 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 09:19:49,135 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@5b009fc4
+   [druid] 2019-01-23 09:19:49,144 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/qf-17.1548064200871.log:0+7187
+   [druid] 2019-01-23 09:19:49,222 [ask Executor #0] INFO  m.phone.etl.mr.EtlToHdfsMapper {1} - 输入：76输出：76过滤：0
+   [druid] 2019-01-23 09:19:49,223 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 09:19:49,312 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} -  map 17% reduce 0%
+   [druid] 2019-01-23 09:19:49,364 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task:attempt_local1231562817_0001_m_000001_0 is done. And is in the process of committing
+   [druid] 2019-01-23 09:19:49,371 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 09:19:49,371 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task attempt_local1231562817_0001_m_000001_0 is allowed to commit now
+   [druid] 2019-01-23 09:19:49,380 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - Saved output of task 'attempt_local1231562817_0001_m_000001_0' to hdfs://min1:8020/ods/01/21/_temporary/0/task_local1231562817_0001_m_000001
+   [druid] 2019-01-23 09:19:49,381 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - map
+   [druid] 2019-01-23 09:19:49,382 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task 'attempt_local1231562817_0001_m_000001_0' done.
+   [druid] 2019-01-23 09:19:49,382 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Finishing task: attempt_local1231562817_0001_m_000001_0
+   [druid] 2019-01-23 09:19:49,382 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local1231562817_0001_m_000002_0
+   [druid] 2019-01-23 09:19:49,384 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 09:19:49,384 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 09:19:49,495 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@5e8e3ab6
+   [druid] 2019-01-23 09:19:49,500 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/qf-17.1548064169931.log:0+6621
+   [druid] 2019-01-23 09:19:49,544 [ask Executor #0] INFO  m.phone.etl.mr.EtlToHdfsMapper {1} - 输入：89输出：89过滤：0
+   [druid] 2019-01-23 09:19:49,544 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 09:19:50,034 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task:attempt_local1231562817_0001_m_000002_0 is done. And is in the process of committing
+   [druid] 2019-01-23 09:19:50,038 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 09:19:50,038 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task attempt_local1231562817_0001_m_000002_0 is allowed to commit now
+   [druid] 2019-01-23 09:19:50,066 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - Saved output of task 'attempt_local1231562817_0001_m_000002_0' to hdfs://min1:8020/ods/01/21/_temporary/0/task_local1231562817_0001_m_000002
+   [druid] 2019-01-23 09:19:50,067 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - map
+   [druid] 2019-01-23 09:19:50,067 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task 'attempt_local1231562817_0001_m_000002_0' done.
+   [druid] 2019-01-23 09:19:50,067 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Finishing task: attempt_local1231562817_0001_m_000002_0
+   [druid] 2019-01-23 09:19:50,067 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local1231562817_0001_m_000003_0
+   [druid] 2019-01-23 09:19:50,068 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 09:19:50,069 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 09:19:50,167 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@2bc2499c
+   [druid] 2019-01-23 09:19:50,170 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/qf-17.1548064093682.log:0+5688
+   [druid] 2019-01-23 09:19:50,256 [ask Executor #0] INFO  m.phone.etl.mr.EtlToHdfsMapper {1} - 输入：101输出：101过滤：0
+   [druid] 2019-01-23 09:19:50,258 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 09:19:50,316 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} -  map 50% reduce 0%
+   [druid] 2019-01-23 09:19:50,797 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task:attempt_local1231562817_0001_m_000003_0 is done. And is in the process of committing
+   [druid] 2019-01-23 09:19:50,813 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 09:19:50,813 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task attempt_local1231562817_0001_m_000003_0 is allowed to commit now
+   [druid] 2019-01-23 09:19:50,836 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - Saved output of task 'attempt_local1231562817_0001_m_000003_0' to hdfs://min1:8020/ods/01/21/_temporary/0/task_local1231562817_0001_m_000003
+   [druid] 2019-01-23 09:19:50,837 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - map
+   [druid] 2019-01-23 09:19:50,838 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task 'attempt_local1231562817_0001_m_000003_0' done.
+   [druid] 2019-01-23 09:19:50,838 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Finishing task: attempt_local1231562817_0001_m_000003_0
+   [druid] 2019-01-23 09:19:50,838 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local1231562817_0001_m_000004_0
+   [druid] 2019-01-23 09:19:50,839 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 09:19:50,840 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 09:19:50,952 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@5cb137ed
+   [druid] 2019-01-23 09:19:50,957 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/qf-17.1548064299041.log:0+1575
+   [druid] 2019-01-23 09:19:50,998 [ask Executor #0] INFO  m.phone.etl.mr.EtlToHdfsMapper {1} - 输入：104输出：104过滤：0
+   [druid] 2019-01-23 09:19:50,998 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 09:19:51,034 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task:attempt_local1231562817_0001_m_000004_0 is done. And is in the process of committing
+   [druid] 2019-01-23 09:19:51,042 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 09:19:51,043 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task attempt_local1231562817_0001_m_000004_0 is allowed to commit now
+   [druid] 2019-01-23 09:19:51,053 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - Saved output of task 'attempt_local1231562817_0001_m_000004_0' to hdfs://min1:8020/ods/01/21/_temporary/0/task_local1231562817_0001_m_000004
+   [druid] 2019-01-23 09:19:51,055 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - map
+   [druid] 2019-01-23 09:19:51,055 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task 'attempt_local1231562817_0001_m_000004_0' done.
+   [druid] 2019-01-23 09:19:51,056 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Finishing task: attempt_local1231562817_0001_m_000004_0
+   [druid] 2019-01-23 09:19:51,056 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local1231562817_0001_m_000005_0
+   [druid] 2019-01-23 09:19:51,057 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 09:19:51,058 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 09:19:51,168 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@68fb8767
+   [druid] 2019-01-23 09:19:51,176 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/qf-17.1548064156123.log:0+1050
+   [druid] 2019-01-23 09:19:51,189 [ask Executor #0] INFO  m.phone.etl.mr.EtlToHdfsMapper {1} - 输入：106输出：106过滤：0
+   [druid] 2019-01-23 09:19:51,190 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 09:19:51,255 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task:attempt_local1231562817_0001_m_000005_0 is done. And is in the process of committing
+   [druid] 2019-01-23 09:19:51,259 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 09:19:51,259 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task attempt_local1231562817_0001_m_000005_0 is allowed to commit now
+   [druid] 2019-01-23 09:19:51,282 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - Saved output of task 'attempt_local1231562817_0001_m_000005_0' to hdfs://min1:8020/ods/01/21/_temporary/0/task_local1231562817_0001_m_000005
+   [druid] 2019-01-23 09:19:51,283 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - map
+   [druid] 2019-01-23 09:19:51,283 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task 'attempt_local1231562817_0001_m_000005_0' done.
+   [druid] 2019-01-23 09:19:51,283 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Finishing task: attempt_local1231562817_0001_m_000005_0
+   [druid] 2019-01-23 09:19:51,283 [Thread-4       ] INFO  e.hadoop.mapred.LocalJobRunner {1} - map task executor complete.
+   [druid] 2019-01-23 09:19:51,320 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} -  map 100% reduce 0%
+   [druid] 2019-01-23 09:19:52,321 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} - Job job_local1231562817_0001 completed successfully
+   [druid] 2019-01-23 09:19:52,371 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} - Counters: 20
+	File System Counters
+		FILE: Number of bytes read=15121
+		FILE: Number of bytes written=1654680
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=266287
+		HDFS: Number of bytes written=20444
+		HDFS: Number of read operations=114
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=54
+	Map-Reduce Framework
+		Map input records=106
+		Map output records=106
+		Input split bytes=696
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=3
+		Total committed heap usage (bytes)=553648128
+	File Input Format Counters 
+		Bytes Read=52555
+	File Output Format Counters 
+		Bytes Written=4028
+   [druid] 2019-01-23 09:21:41,702 [main           ] INFO  conf.Configuration.deprecation {1} - session.id is deprecated. Instead, use dfs.metrics.session-id
+   [druid] 2019-01-23 09:21:41,704 [main           ] INFO  .hadoop.metrics.jvm.JvmMetrics {1} - Initializing JVM Metrics with processName=JobTracker, sessionId=
+   [druid] 2019-01-23 09:21:42,485 [main           ] WARN  .mapreduce.JobResourceUploader {1} - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+   [druid] 2019-01-23 09:21:42,570 [main           ] INFO  duce.lib.input.FileInputFormat {1} - Total input paths to process : 6
+   [druid] 2019-01-23 09:21:42,624 [main           ] INFO  .hadoop.mapreduce.JobSubmitter {1} - number of splits:6
+   [druid] 2019-01-23 09:21:42,762 [main           ] INFO  .hadoop.mapreduce.JobSubmitter {1} - Submitting tokens for job: job_local2118419204_0001
+   [druid] 2019-01-23 09:21:43,009 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} - The url to track the job: http://localhost:8080/
+   [druid] 2019-01-23 09:21:43,010 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} - Running job: job_local2118419204_0001
+   [druid] 2019-01-23 09:21:43,018 [Thread-4       ] INFO  e.hadoop.mapred.LocalJobRunner {1} - OutputCommitter set in config null
+   [druid] 2019-01-23 09:21:43,025 [Thread-4       ] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 09:21:43,027 [Thread-4       ] INFO  e.hadoop.mapred.LocalJobRunner {1} - OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+   [druid] 2019-01-23 09:21:43,125 [Thread-4       ] INFO  e.hadoop.mapred.LocalJobRunner {1} - Waiting for map tasks
+   [druid] 2019-01-23 09:21:43,126 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local2118419204_0001_m_000000_0
+   [druid] 2019-01-23 09:21:43,154 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 09:21:43,162 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 09:21:43,275 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@2b81967a
+   [druid] 2019-01-23 09:21:43,285 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/qf-17.1548064244531.log:0+30434
+   [druid] 2019-01-23 09:21:43,822 [ask Executor #0] INFO  m.phone.etl.mr.EtlToHdfsMapper {1} - 输入：62输出：62过滤：0
+   [druid] 2019-01-23 09:21:43,826 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 09:21:43,968 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task:attempt_local2118419204_0001_m_000000_0 is done. And is in the process of committing
+   [druid] 2019-01-23 09:21:43,984 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 09:21:43,984 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task attempt_local2118419204_0001_m_000000_0 is allowed to commit now
+   [druid] 2019-01-23 09:21:44,003 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - Saved output of task 'attempt_local2118419204_0001_m_000000_0' to hdfs://min1:8020/ods/01/21/_temporary/0/task_local2118419204_0001_m_000000
+   [druid] 2019-01-23 09:21:44,005 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - map
+   [druid] 2019-01-23 09:21:44,005 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task 'attempt_local2118419204_0001_m_000000_0' done.
+   [druid] 2019-01-23 09:21:44,005 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Finishing task: attempt_local2118419204_0001_m_000000_0
+   [druid] 2019-01-23 09:21:44,005 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local2118419204_0001_m_000001_0
+   [druid] 2019-01-23 09:21:44,007 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 09:21:44,007 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 09:21:44,015 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} - Job job_local2118419204_0001 running in uber mode : false
+   [druid] 2019-01-23 09:21:44,018 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} -  map 100% reduce 0%
+   [druid] 2019-01-23 09:21:44,145 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@56b9b2a6
+   [druid] 2019-01-23 09:21:44,148 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/qf-17.1548064200871.log:0+7187
+   [druid] 2019-01-23 09:21:44,166 [ask Executor #0] INFO  m.phone.etl.mr.EtlToHdfsMapper {1} - 输入：76输出：76过滤：0
+   [druid] 2019-01-23 09:21:44,167 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 09:21:44,248 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task:attempt_local2118419204_0001_m_000001_0 is done. And is in the process of committing
+   [druid] 2019-01-23 09:21:44,251 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 09:21:44,251 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task attempt_local2118419204_0001_m_000001_0 is allowed to commit now
+   [druid] 2019-01-23 09:21:44,261 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - Saved output of task 'attempt_local2118419204_0001_m_000001_0' to hdfs://min1:8020/ods/01/21/_temporary/0/task_local2118419204_0001_m_000001
+   [druid] 2019-01-23 09:21:44,262 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - map
+   [druid] 2019-01-23 09:21:44,263 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task 'attempt_local2118419204_0001_m_000001_0' done.
+   [druid] 2019-01-23 09:21:44,263 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Finishing task: attempt_local2118419204_0001_m_000001_0
+   [druid] 2019-01-23 09:21:44,263 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local2118419204_0001_m_000002_0
+   [druid] 2019-01-23 09:21:44,264 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 09:21:44,265 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 09:21:44,372 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@3dd02519
+   [druid] 2019-01-23 09:21:44,375 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/qf-17.1548064169931.log:0+6621
+   [druid] 2019-01-23 09:21:44,399 [ask Executor #0] INFO  m.phone.etl.mr.EtlToHdfsMapper {1} - 输入：89输出：89过滤：0
+   [druid] 2019-01-23 09:21:44,399 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 09:21:44,651 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task:attempt_local2118419204_0001_m_000002_0 is done. And is in the process of committing
+   [druid] 2019-01-23 09:21:44,655 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 09:21:44,655 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task attempt_local2118419204_0001_m_000002_0 is allowed to commit now
+   [druid] 2019-01-23 09:21:44,701 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - Saved output of task 'attempt_local2118419204_0001_m_000002_0' to hdfs://min1:8020/ods/01/21/_temporary/0/task_local2118419204_0001_m_000002
+   [druid] 2019-01-23 09:21:44,702 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - map
+   [druid] 2019-01-23 09:21:44,702 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task 'attempt_local2118419204_0001_m_000002_0' done.
+   [druid] 2019-01-23 09:21:44,702 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Finishing task: attempt_local2118419204_0001_m_000002_0
+   [druid] 2019-01-23 09:21:44,702 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local2118419204_0001_m_000003_0
+   [druid] 2019-01-23 09:21:44,704 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 09:21:44,706 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 09:21:44,830 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@42e70e72
+   [druid] 2019-01-23 09:21:44,833 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/qf-17.1548064093682.log:0+5688
+   [druid] 2019-01-23 09:21:44,949 [ask Executor #0] INFO  m.phone.etl.mr.EtlToHdfsMapper {1} - 输入：101输出：101过滤：0
+   [druid] 2019-01-23 09:21:44,949 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 09:21:45,011 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task:attempt_local2118419204_0001_m_000003_0 is done. And is in the process of committing
+   [druid] 2019-01-23 09:21:45,017 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 09:21:45,017 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task attempt_local2118419204_0001_m_000003_0 is allowed to commit now
+   [druid] 2019-01-23 09:21:45,022 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} -  map 50% reduce 0%
+   [druid] 2019-01-23 09:21:45,026 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - Saved output of task 'attempt_local2118419204_0001_m_000003_0' to hdfs://min1:8020/ods/01/21/_temporary/0/task_local2118419204_0001_m_000003
+   [druid] 2019-01-23 09:21:45,027 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - map
+   [druid] 2019-01-23 09:21:45,027 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task 'attempt_local2118419204_0001_m_000003_0' done.
+   [druid] 2019-01-23 09:21:45,027 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Finishing task: attempt_local2118419204_0001_m_000003_0
+   [druid] 2019-01-23 09:21:45,027 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local2118419204_0001_m_000004_0
+   [druid] 2019-01-23 09:21:45,028 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 09:21:45,029 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 09:21:45,140 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@40ba7c20
+   [druid] 2019-01-23 09:21:45,142 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/qf-17.1548064299041.log:0+1575
+   [druid] 2019-01-23 09:21:45,155 [ask Executor #0] INFO  m.phone.etl.mr.EtlToHdfsMapper {1} - 输入：104输出：104过滤：0
+   [druid] 2019-01-23 09:21:45,156 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 09:21:45,604 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task:attempt_local2118419204_0001_m_000004_0 is done. And is in the process of committing
+   [druid] 2019-01-23 09:21:45,607 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 09:21:45,607 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task attempt_local2118419204_0001_m_000004_0 is allowed to commit now
+   [druid] 2019-01-23 09:21:45,614 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - Saved output of task 'attempt_local2118419204_0001_m_000004_0' to hdfs://min1:8020/ods/01/21/_temporary/0/task_local2118419204_0001_m_000004
+   [druid] 2019-01-23 09:21:45,615 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - map
+   [druid] 2019-01-23 09:21:45,615 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task 'attempt_local2118419204_0001_m_000004_0' done.
+   [druid] 2019-01-23 09:21:45,615 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Finishing task: attempt_local2118419204_0001_m_000004_0
+   [druid] 2019-01-23 09:21:45,615 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local2118419204_0001_m_000005_0
+   [druid] 2019-01-23 09:21:45,616 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 09:21:45,616 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 09:21:45,709 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@7c52a627
+   [druid] 2019-01-23 09:21:45,716 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/qf-17.1548064156123.log:0+1050
+   [druid] 2019-01-23 09:21:45,727 [ask Executor #0] INFO  m.phone.etl.mr.EtlToHdfsMapper {1} - 输入：106输出：106过滤：0
+   [druid] 2019-01-23 09:21:45,727 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 09:21:45,766 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task:attempt_local2118419204_0001_m_000005_0 is done. And is in the process of committing
+   [druid] 2019-01-23 09:21:45,769 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 09:21:45,769 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task attempt_local2118419204_0001_m_000005_0 is allowed to commit now
+   [druid] 2019-01-23 09:21:45,776 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - Saved output of task 'attempt_local2118419204_0001_m_000005_0' to hdfs://min1:8020/ods/01/21/_temporary/0/task_local2118419204_0001_m_000005
+   [druid] 2019-01-23 09:21:45,776 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - map
+   [druid] 2019-01-23 09:21:45,776 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task 'attempt_local2118419204_0001_m_000005_0' done.
+   [druid] 2019-01-23 09:21:45,777 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Finishing task: attempt_local2118419204_0001_m_000005_0
+   [druid] 2019-01-23 09:21:45,777 [Thread-4       ] INFO  e.hadoop.mapred.LocalJobRunner {1} - map task executor complete.
+   [druid] 2019-01-23 09:21:46,023 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} -  map 100% reduce 0%
+   [druid] 2019-01-23 09:21:46,023 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} - Job job_local2118419204_0001 completed successfully
+   [druid] 2019-01-23 09:21:46,047 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} - Counters: 20
+	File System Counters
+		FILE: Number of bytes read=15121
+		FILE: Number of bytes written=1654680
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=266287
+		HDFS: Number of bytes written=20444
+		HDFS: Number of read operations=114
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=48
+	Map-Reduce Framework
+		Map input records=106
+		Map output records=106
+		Input split bytes=696
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=0
+		Total committed heap usage (bytes)=682622976
+	File Input Format Counters 
+		Bytes Read=52555
+	File Output Format Counters 
+		Bytes Written=4028
+   [druid] 2019-01-23 14:00:30,565 [main           ] INFO  conf.Configuration.deprecation {1} - session.id is deprecated. Instead, use dfs.metrics.session-id
+   [druid] 2019-01-23 14:00:30,570 [main           ] INFO  .hadoop.metrics.jvm.JvmMetrics {1} - Initializing JVM Metrics with processName=JobTracker, sessionId=
+   [druid] 2019-01-23 14:00:31,312 [main           ] WARN  .mapreduce.JobResourceUploader {1} - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+   [druid] 2019-01-23 14:00:31,439 [main           ] INFO  duce.lib.input.FileInputFormat {1} - Total input paths to process : 9
+   [druid] 2019-01-23 14:00:31,563 [main           ] INFO  .hadoop.mapreduce.JobSubmitter {1} - number of splits:9
+   [druid] 2019-01-23 14:00:31,664 [main           ] INFO  .hadoop.mapreduce.JobSubmitter {1} - Submitting tokens for job: job_local995514602_0001
+   [druid] 2019-01-23 14:00:31,994 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} - The url to track the job: http://localhost:8080/
+   [druid] 2019-01-23 14:00:31,996 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} - Running job: job_local995514602_0001
+   [druid] 2019-01-23 14:00:32,002 [Thread-4       ] INFO  e.hadoop.mapred.LocalJobRunner {1} - OutputCommitter set in config null
+   [druid] 2019-01-23 14:00:32,014 [Thread-4       ] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 14:00:32,017 [Thread-4       ] INFO  e.hadoop.mapred.LocalJobRunner {1} - OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+   [druid] 2019-01-23 14:00:32,098 [Thread-4       ] INFO  e.hadoop.mapred.LocalJobRunner {1} - Waiting for map tasks
+   [druid] 2019-01-23 14:00:32,100 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local995514602_0001_m_000000_0
+   [druid] 2019-01-23 14:00:32,142 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 14:00:32,152 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 14:00:32,360 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@71d35261
+   [druid] 2019-01-23 14:00:32,366 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/2018-11-11-end.log:0+32947
+   [druid] 2019-01-23 14:00:32,849 [ask Executor #0] INFO  m.phone.etl.mr.EtlToHdfsMapper {1} - 输入：82输出：82过滤：0
+   [druid] 2019-01-23 14:00:32,854 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:00:32,973 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task:attempt_local995514602_0001_m_000000_0 is done. And is in the process of committing
+   [druid] 2019-01-23 14:00:32,986 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:00:32,986 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task attempt_local995514602_0001_m_000000_0 is allowed to commit now
+   [druid] 2019-01-23 14:00:32,998 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - Saved output of task 'attempt_local995514602_0001_m_000000_0' to hdfs://min1:8020/ods/01/21/_temporary/0/task_local995514602_0001_m_000000
+   [druid] 2019-01-23 14:00:32,999 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - map
+   [druid] 2019-01-23 14:00:32,999 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} - Job job_local995514602_0001 running in uber mode : false
+   [druid] 2019-01-23 14:00:32,999 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task 'attempt_local995514602_0001_m_000000_0' done.
+   [druid] 2019-01-23 14:00:33,000 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Finishing task: attempt_local995514602_0001_m_000000_0
+   [druid] 2019-01-23 14:00:33,000 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local995514602_0001_m_000001_0
+   [druid] 2019-01-23 14:00:33,001 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 14:00:33,001 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} -  map 100% reduce 0%
+   [druid] 2019-01-23 14:00:33,002 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 14:00:33,123 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@57cb33f3
+   [druid] 2019-01-23 14:00:33,127 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/qf-17.1548064244531.log:0+30434
+   [druid] 2019-01-23 14:00:33,181 [ask Executor #0] INFO  m.phone.etl.mr.EtlToHdfsMapper {1} - 输入：144输出：144过滤：0
+   [druid] 2019-01-23 14:00:33,182 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:00:33,234 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task:attempt_local995514602_0001_m_000001_0 is done. And is in the process of committing
+   [druid] 2019-01-23 14:00:33,241 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:00:33,241 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task attempt_local995514602_0001_m_000001_0 is allowed to commit now
+   [druid] 2019-01-23 14:00:33,256 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - Saved output of task 'attempt_local995514602_0001_m_000001_0' to hdfs://min1:8020/ods/01/21/_temporary/0/task_local995514602_0001_m_000001
+   [druid] 2019-01-23 14:00:33,257 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - map
+   [druid] 2019-01-23 14:00:33,258 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task 'attempt_local995514602_0001_m_000001_0' done.
+   [druid] 2019-01-23 14:00:33,258 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Finishing task: attempt_local995514602_0001_m_000001_0
+   [druid] 2019-01-23 14:00:33,258 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local995514602_0001_m_000002_0
+   [druid] 2019-01-23 14:00:33,259 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 14:00:33,260 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 14:00:33,377 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@354fb24
+   [druid] 2019-01-23 14:00:33,379 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/2018-11-12.log:0+14734
+   [druid] 2019-01-23 14:00:33,409 [ask Executor #0] INFO  m.phone.etl.mr.EtlToHdfsMapper {1} - 输入：189输出：189过滤：0
+   [druid] 2019-01-23 14:00:33,409 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:00:33,435 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task:attempt_local995514602_0001_m_000002_0 is done. And is in the process of committing
+   [druid] 2019-01-23 14:00:33,438 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:00:33,438 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task attempt_local995514602_0001_m_000002_0 is allowed to commit now
+   [druid] 2019-01-23 14:00:33,444 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - Saved output of task 'attempt_local995514602_0001_m_000002_0' to hdfs://min1:8020/ods/01/21/_temporary/0/task_local995514602_0001_m_000002
+   [druid] 2019-01-23 14:00:33,445 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - map
+   [druid] 2019-01-23 14:00:33,445 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task 'attempt_local995514602_0001_m_000002_0' done.
+   [druid] 2019-01-23 14:00:33,445 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Finishing task: attempt_local995514602_0001_m_000002_0
+   [druid] 2019-01-23 14:00:33,445 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local995514602_0001_m_000003_0
+   [druid] 2019-01-23 14:00:33,446 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 14:00:33,447 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 14:00:33,551 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@2ba6ccea
+   [druid] 2019-01-23 14:00:33,554 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/qf-17.1548064200871.log:0+7187
+   [druid] 2019-01-23 14:00:33,571 [ask Executor #0] INFO  m.phone.etl.mr.EtlToHdfsMapper {1} - 输入：203输出：203过滤：0
+   [druid] 2019-01-23 14:00:33,571 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:00:33,609 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task:attempt_local995514602_0001_m_000003_0 is done. And is in the process of committing
+   [druid] 2019-01-23 14:00:33,611 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:00:33,611 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task attempt_local995514602_0001_m_000003_0 is allowed to commit now
+   [druid] 2019-01-23 14:00:33,618 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - Saved output of task 'attempt_local995514602_0001_m_000003_0' to hdfs://min1:8020/ods/01/21/_temporary/0/task_local995514602_0001_m_000003
+   [druid] 2019-01-23 14:00:33,619 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - map
+   [druid] 2019-01-23 14:00:33,620 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task 'attempt_local995514602_0001_m_000003_0' done.
+   [druid] 2019-01-23 14:00:33,620 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Finishing task: attempt_local995514602_0001_m_000003_0
+   [druid] 2019-01-23 14:00:33,620 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local995514602_0001_m_000004_0
+   [druid] 2019-01-23 14:00:33,622 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 14:00:33,622 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 14:00:33,726 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@53ac5b0a
+   [druid] 2019-01-23 14:00:33,730 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/qf-17.1548064169931.log:0+6621
+   [druid] 2019-01-23 14:00:33,747 [ask Executor #0] INFO  m.phone.etl.mr.EtlToHdfsMapper {1} - 输入：216输出：216过滤：0
+   [druid] 2019-01-23 14:00:33,748 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:00:33,781 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task:attempt_local995514602_0001_m_000004_0 is done. And is in the process of committing
+   [druid] 2019-01-23 14:00:33,785 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:00:33,785 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task attempt_local995514602_0001_m_000004_0 is allowed to commit now
+   [druid] 2019-01-23 14:00:33,792 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - Saved output of task 'attempt_local995514602_0001_m_000004_0' to hdfs://min1:8020/ods/01/21/_temporary/0/task_local995514602_0001_m_000004
+   [druid] 2019-01-23 14:00:33,793 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - map
+   [druid] 2019-01-23 14:00:33,793 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task 'attempt_local995514602_0001_m_000004_0' done.
+   [druid] 2019-01-23 14:00:33,793 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Finishing task: attempt_local995514602_0001_m_000004_0
+   [druid] 2019-01-23 14:00:33,793 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local995514602_0001_m_000005_0
+   [druid] 2019-01-23 14:00:33,795 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 14:00:33,795 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 14:00:33,912 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@417d96b1
+   [druid] 2019-01-23 14:00:33,917 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/qf-17.1548064093682.log:0+5688
+   [druid] 2019-01-23 14:00:33,935 [ask Executor #0] INFO  m.phone.etl.mr.EtlToHdfsMapper {1} - 输入：228输出：228过滤：0
+   [druid] 2019-01-23 14:00:33,935 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:00:33,962 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task:attempt_local995514602_0001_m_000005_0 is done. And is in the process of committing
+   [druid] 2019-01-23 14:00:33,966 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:00:33,966 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task attempt_local995514602_0001_m_000005_0 is allowed to commit now
+   [druid] 2019-01-23 14:00:33,978 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - Saved output of task 'attempt_local995514602_0001_m_000005_0' to hdfs://min1:8020/ods/01/21/_temporary/0/task_local995514602_0001_m_000005
+   [druid] 2019-01-23 14:00:33,979 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - map
+   [druid] 2019-01-23 14:00:33,979 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task 'attempt_local995514602_0001_m_000005_0' done.
+   [druid] 2019-01-23 14:00:33,979 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Finishing task: attempt_local995514602_0001_m_000005_0
+   [druid] 2019-01-23 14:00:33,979 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local995514602_0001_m_000006_0
+   [druid] 2019-01-23 14:00:33,981 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 14:00:33,981 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 14:00:34,148 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@454ea548
+   [druid] 2019-01-23 14:00:34,151 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/qf-17.1548064299041.log:0+1575
+   [druid] 2019-01-23 14:00:34,172 [ask Executor #0] INFO  m.phone.etl.mr.EtlToHdfsMapper {1} - 输入：231输出：231过滤：0
+   [druid] 2019-01-23 14:00:34,172 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:00:34,603 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task:attempt_local995514602_0001_m_000006_0 is done. And is in the process of committing
+   [druid] 2019-01-23 14:00:34,606 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:00:34,606 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task attempt_local995514602_0001_m_000006_0 is allowed to commit now
+   [druid] 2019-01-23 14:00:34,612 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - Saved output of task 'attempt_local995514602_0001_m_000006_0' to hdfs://min1:8020/ods/01/21/_temporary/0/task_local995514602_0001_m_000006
+   [druid] 2019-01-23 14:00:34,613 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - map
+   [druid] 2019-01-23 14:00:34,613 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task 'attempt_local995514602_0001_m_000006_0' done.
+   [druid] 2019-01-23 14:00:34,613 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Finishing task: attempt_local995514602_0001_m_000006_0
+   [druid] 2019-01-23 14:00:34,613 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local995514602_0001_m_000007_0
+   [druid] 2019-01-23 14:00:34,615 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 14:00:34,615 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 14:00:34,719 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@29923a88
+   [druid] 2019-01-23 14:00:34,721 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/qf-17.1548064156123.log:0+1050
+   [druid] 2019-01-23 14:00:34,735 [ask Executor #0] INFO  m.phone.etl.mr.EtlToHdfsMapper {1} - 输入：233输出：233过滤：0
+   [druid] 2019-01-23 14:00:34,735 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:00:34,757 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task:attempt_local995514602_0001_m_000007_0 is done. And is in the process of committing
+   [druid] 2019-01-23 14:00:34,759 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:00:34,760 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task attempt_local995514602_0001_m_000007_0 is allowed to commit now
+   [druid] 2019-01-23 14:00:34,766 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - Saved output of task 'attempt_local995514602_0001_m_000007_0' to hdfs://min1:8020/ods/01/21/_temporary/0/task_local995514602_0001_m_000007
+   [druid] 2019-01-23 14:00:34,767 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - map
+   [druid] 2019-01-23 14:00:34,767 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task 'attempt_local995514602_0001_m_000007_0' done.
+   [druid] 2019-01-23 14:00:34,767 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Finishing task: attempt_local995514602_0001_m_000007_0
+   [druid] 2019-01-23 14:00:34,768 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local995514602_0001_m_000008_0
+   [druid] 2019-01-23 14:00:34,769 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 14:00:34,770 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 14:00:34,890 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@6a2f8841
+   [druid] 2019-01-23 14:00:34,893 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/03:0+0
+   [druid] 2019-01-23 14:00:34,914 [Thread-4       ] INFO  e.hadoop.mapred.LocalJobRunner {1} - map task executor complete.
+   [druid] 2019-01-23 14:00:34,920 [Thread-4       ] WARN  e.hadoop.mapred.LocalJobRunner {1} - job_local995514602_0001
+   java.lang.Exception: java.io.FileNotFoundException: Path is not a file: /logs/01/21/03
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:70)
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:56)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocationsInt(FSNamesystem.java:2094)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:2064)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:1977)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.getBlockLocations(NameNodeRpcServer.java:575)
+	at org.apache.hadoop.hdfs.server.namenode.AuthorizationProviderProxyClientProtocol.getBlockLocations(AuthorizationProviderProxyClientProtocol.java:92)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.getBlockLocations(ClientNamenodeProtocolServerSideTranslatorPB.java:376)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:617)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:1073)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2226)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2222)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1920)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2220)
+
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.runTasks(LocalJobRunner.java:462)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:522)
+Caused by: java.io.FileNotFoundException: Path is not a file: /logs/01/21/03
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:70)
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:56)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocationsInt(FSNamesystem.java:2094)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:2064)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:1977)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.getBlockLocations(NameNodeRpcServer.java:575)
+	at org.apache.hadoop.hdfs.server.namenode.AuthorizationProviderProxyClientProtocol.getBlockLocations(AuthorizationProviderProxyClientProtocol.java:92)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.getBlockLocations(ClientNamenodeProtocolServerSideTranslatorPB.java:376)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:617)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:1073)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2226)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2222)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1920)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2220)
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.apache.hadoop.ipc.RemoteException.instantiateException(RemoteException.java:106)
+	at org.apache.hadoop.ipc.RemoteException.unwrapRemoteException(RemoteException.java:73)
+	at org.apache.hadoop.hdfs.DFSClient.callGetBlockLocations(DFSClient.java:1242)
+	at org.apache.hadoop.hdfs.DFSClient.getLocatedBlocks(DFSClient.java:1227)
+	at org.apache.hadoop.hdfs.DFSClient.getLocatedBlocks(DFSClient.java:1215)
+	at org.apache.hadoop.hdfs.DFSInputStream.fetchLocatedBlocksAndGetLastBlockLength(DFSInputStream.java:303)
+	at org.apache.hadoop.hdfs.DFSInputStream.openInfo(DFSInputStream.java:269)
+	at org.apache.hadoop.hdfs.DFSInputStream.<init>(DFSInputStream.java:261)
+	at org.apache.hadoop.hdfs.DFSClient.open(DFSClient.java:1540)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$3.doCall(DistributedFileSystem.java:304)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$3.doCall(DistributedFileSystem.java:299)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.open(DistributedFileSystem.java:312)
+	at org.apache.hadoop.fs.FileSystem.open(FileSystem.java:767)
+	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.initialize(LineRecordReader.java:85)
+	at org.apache.hadoop.mapred.MapTask$NewTrackingRecordReader.initialize(MapTask.java:548)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:786)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.hadoop.ipc.RemoteException(java.io.FileNotFoundException): Path is not a file: /logs/01/21/03
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:70)
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:56)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocationsInt(FSNamesystem.java:2094)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:2064)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:1977)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.getBlockLocations(NameNodeRpcServer.java:575)
+	at org.apache.hadoop.hdfs.server.namenode.AuthorizationProviderProxyClientProtocol.getBlockLocations(AuthorizationProviderProxyClientProtocol.java:92)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.getBlockLocations(ClientNamenodeProtocolServerSideTranslatorPB.java:376)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:617)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:1073)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2226)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2222)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1920)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2220)
+
+	at org.apache.hadoop.ipc.Client.call(Client.java:1476)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1407)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Invoker.invoke(ProtobufRpcEngine.java:229)
+	at com.sun.proxy.$Proxy9.getBlockLocations(Unknown Source)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolTranslatorPB.getBlockLocations(ClientNamenodeProtocolTranslatorPB.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:187)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:102)
+	at com.sun.proxy.$Proxy10.getBlockLocations(Unknown Source)
+	at org.apache.hadoop.hdfs.DFSClient.callGetBlockLocations(DFSClient.java:1240)
+	... 21 more
+[druid] 2019-01-23 14:00:35,006 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} - Job job_local995514602_0001 failed with state FAILED due to: NA
+   [druid] 2019-01-23 14:00:35,030 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} - Counters: 20
+	File System Counters
+		FILE: Number of bytes read=35024
+		FILE: Number of bytes written=2197248
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=648701
+		HDFS: Number of bytes written=57988
+		HDFS: Number of read operations=184
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=88
+	Map-Reduce Framework
+		Map input records=233
+		Map output records=233
+		Input split bytes=914
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=4
+		Total committed heap usage (bytes)=1040187392
+	File Input Format Counters 
+		Bytes Read=100236
+	File Output Format Counters 
+		Bytes Written=8854
+   [druid] 2019-01-23 14:01:03,701 [main           ] INFO  conf.Configuration.deprecation {1} - session.id is deprecated. Instead, use dfs.metrics.session-id
+   [druid] 2019-01-23 14:01:03,703 [main           ] INFO  .hadoop.metrics.jvm.JvmMetrics {1} - Initializing JVM Metrics with processName=JobTracker, sessionId=
+   [druid] 2019-01-23 14:01:04,443 [main           ] WARN  .mapreduce.JobResourceUploader {1} - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+   [druid] 2019-01-23 14:01:04,513 [main           ] INFO  duce.lib.input.FileInputFormat {1} - Total input paths to process : 9
+   [druid] 2019-01-23 14:01:04,600 [main           ] INFO  .hadoop.mapreduce.JobSubmitter {1} - number of splits:9
+   [druid] 2019-01-23 14:01:04,711 [main           ] INFO  .hadoop.mapreduce.JobSubmitter {1} - Submitting tokens for job: job_local1675054463_0001
+   [druid] 2019-01-23 14:01:04,995 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} - The url to track the job: http://localhost:8080/
+   [druid] 2019-01-23 14:01:04,997 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} - Running job: job_local1675054463_0001
+   [druid] 2019-01-23 14:01:04,999 [Thread-4       ] INFO  e.hadoop.mapred.LocalJobRunner {1} - OutputCommitter set in config null
+   [druid] 2019-01-23 14:01:05,010 [Thread-4       ] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 14:01:05,013 [Thread-4       ] INFO  e.hadoop.mapred.LocalJobRunner {1} - OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+   [druid] 2019-01-23 14:01:05,104 [Thread-4       ] INFO  e.hadoop.mapred.LocalJobRunner {1} - Waiting for map tasks
+   [druid] 2019-01-23 14:01:05,105 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local1675054463_0001_m_000000_0
+   [druid] 2019-01-23 14:01:05,147 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 14:01:05,158 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 14:01:05,286 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@5d0f956
+   [druid] 2019-01-23 14:01:05,293 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/2018-11-11-end.log:0+32947
+   [druid] 2019-01-23 14:01:06,000 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} - Job job_local1675054463_0001 running in uber mode : false
+   [druid] 2019-01-23 14:01:06,002 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} -  map 0% reduce 0%
+   [druid] 2019-01-23 14:01:06,429 [ask Executor #0] INFO  m.phone.etl.mr.EtlToHdfsMapper {1} - 输入：82输出：82过滤：0
+   [druid] 2019-01-23 14:01:06,432 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:01:06,541 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task:attempt_local1675054463_0001_m_000000_0 is done. And is in the process of committing
+   [druid] 2019-01-23 14:01:06,556 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:01:06,556 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task attempt_local1675054463_0001_m_000000_0 is allowed to commit now
+   [druid] 2019-01-23 14:01:06,571 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - Saved output of task 'attempt_local1675054463_0001_m_000000_0' to hdfs://min1:8020/ods/01/21/_temporary/0/task_local1675054463_0001_m_000000
+   [druid] 2019-01-23 14:01:06,572 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - map
+   [druid] 2019-01-23 14:01:06,572 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task 'attempt_local1675054463_0001_m_000000_0' done.
+   [druid] 2019-01-23 14:01:06,572 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Finishing task: attempt_local1675054463_0001_m_000000_0
+   [druid] 2019-01-23 14:01:06,572 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local1675054463_0001_m_000001_0
+   [druid] 2019-01-23 14:01:06,574 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 14:01:06,574 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 14:01:06,714 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@301f6d91
+   [druid] 2019-01-23 14:01:06,717 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/qf-17.1548064244531.log:0+30434
+   [druid] 2019-01-23 14:01:06,759 [ask Executor #0] INFO  m.phone.etl.mr.EtlToHdfsMapper {1} - 输入：144输出：144过滤：0
+   [druid] 2019-01-23 14:01:06,760 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:01:06,801 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task:attempt_local1675054463_0001_m_000001_0 is done. And is in the process of committing
+   [druid] 2019-01-23 14:01:06,805 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:01:06,805 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task attempt_local1675054463_0001_m_000001_0 is allowed to commit now
+   [druid] 2019-01-23 14:01:06,814 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - Saved output of task 'attempt_local1675054463_0001_m_000001_0' to hdfs://min1:8020/ods/01/21/_temporary/0/task_local1675054463_0001_m_000001
+   [druid] 2019-01-23 14:01:06,815 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - map
+   [druid] 2019-01-23 14:01:06,815 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task 'attempt_local1675054463_0001_m_000001_0' done.
+   [druid] 2019-01-23 14:01:06,815 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Finishing task: attempt_local1675054463_0001_m_000001_0
+   [druid] 2019-01-23 14:01:06,815 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local1675054463_0001_m_000002_0
+   [druid] 2019-01-23 14:01:06,817 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 14:01:06,818 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 14:01:06,934 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@4f661fee
+   [druid] 2019-01-23 14:01:06,937 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/2018-11-12.log:0+14734
+   [druid] 2019-01-23 14:01:06,960 [ask Executor #0] INFO  m.phone.etl.mr.EtlToHdfsMapper {1} - 输入：189输出：189过滤：0
+   [druid] 2019-01-23 14:01:06,960 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:01:06,984 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task:attempt_local1675054463_0001_m_000002_0 is done. And is in the process of committing
+   [druid] 2019-01-23 14:01:06,987 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:01:06,987 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task attempt_local1675054463_0001_m_000002_0 is allowed to commit now
+   [druid] 2019-01-23 14:01:06,995 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - Saved output of task 'attempt_local1675054463_0001_m_000002_0' to hdfs://min1:8020/ods/01/21/_temporary/0/task_local1675054463_0001_m_000002
+   [druid] 2019-01-23 14:01:06,996 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - map
+   [druid] 2019-01-23 14:01:06,997 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task 'attempt_local1675054463_0001_m_000002_0' done.
+   [druid] 2019-01-23 14:01:06,997 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Finishing task: attempt_local1675054463_0001_m_000002_0
+   [druid] 2019-01-23 14:01:06,997 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local1675054463_0001_m_000003_0
+   [druid] 2019-01-23 14:01:06,998 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 14:01:06,999 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 14:01:07,006 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} -  map 100% reduce 0%
+   [druid] 2019-01-23 14:01:07,115 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@50e3744
+   [druid] 2019-01-23 14:01:07,120 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/qf-17.1548064200871.log:0+7187
+   [druid] 2019-01-23 14:01:07,142 [ask Executor #0] INFO  m.phone.etl.mr.EtlToHdfsMapper {1} - 输入：203输出：203过滤：0
+   [druid] 2019-01-23 14:01:07,143 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:01:07,173 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task:attempt_local1675054463_0001_m_000003_0 is done. And is in the process of committing
+   [druid] 2019-01-23 14:01:07,176 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:01:07,176 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task attempt_local1675054463_0001_m_000003_0 is allowed to commit now
+   [druid] 2019-01-23 14:01:07,183 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - Saved output of task 'attempt_local1675054463_0001_m_000003_0' to hdfs://min1:8020/ods/01/21/_temporary/0/task_local1675054463_0001_m_000003
+   [druid] 2019-01-23 14:01:07,183 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - map
+   [druid] 2019-01-23 14:01:07,184 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task 'attempt_local1675054463_0001_m_000003_0' done.
+   [druid] 2019-01-23 14:01:07,184 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Finishing task: attempt_local1675054463_0001_m_000003_0
+   [druid] 2019-01-23 14:01:07,184 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local1675054463_0001_m_000004_0
+   [druid] 2019-01-23 14:01:07,185 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 14:01:07,186 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 14:01:07,291 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@5953c5bb
+   [druid] 2019-01-23 14:01:07,294 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/qf-17.1548064169931.log:0+6621
+   [druid] 2019-01-23 14:01:07,308 [ask Executor #0] INFO  m.phone.etl.mr.EtlToHdfsMapper {1} - 输入：216输出：216过滤：0
+   [druid] 2019-01-23 14:01:07,308 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:01:07,342 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task:attempt_local1675054463_0001_m_000004_0 is done. And is in the process of committing
+   [druid] 2019-01-23 14:01:07,344 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:01:07,344 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task attempt_local1675054463_0001_m_000004_0 is allowed to commit now
+   [druid] 2019-01-23 14:01:07,353 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - Saved output of task 'attempt_local1675054463_0001_m_000004_0' to hdfs://min1:8020/ods/01/21/_temporary/0/task_local1675054463_0001_m_000004
+   [druid] 2019-01-23 14:01:07,354 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - map
+   [druid] 2019-01-23 14:01:07,354 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task 'attempt_local1675054463_0001_m_000004_0' done.
+   [druid] 2019-01-23 14:01:07,355 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Finishing task: attempt_local1675054463_0001_m_000004_0
+   [druid] 2019-01-23 14:01:07,358 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local1675054463_0001_m_000005_0
+   [druid] 2019-01-23 14:01:07,360 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 14:01:07,361 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 14:01:07,480 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@98ff833
+   [druid] 2019-01-23 14:01:07,485 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/qf-17.1548064093682.log:0+5688
+   [druid] 2019-01-23 14:01:07,502 [ask Executor #0] INFO  m.phone.etl.mr.EtlToHdfsMapper {1} - 输入：228输出：228过滤：0
+   [druid] 2019-01-23 14:01:07,502 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:01:07,526 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task:attempt_local1675054463_0001_m_000005_0 is done. And is in the process of committing
+   [druid] 2019-01-23 14:01:07,528 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:01:07,529 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task attempt_local1675054463_0001_m_000005_0 is allowed to commit now
+   [druid] 2019-01-23 14:01:07,534 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - Saved output of task 'attempt_local1675054463_0001_m_000005_0' to hdfs://min1:8020/ods/01/21/_temporary/0/task_local1675054463_0001_m_000005
+   [druid] 2019-01-23 14:01:07,535 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - map
+   [druid] 2019-01-23 14:01:07,535 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task 'attempt_local1675054463_0001_m_000005_0' done.
+   [druid] 2019-01-23 14:01:07,535 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Finishing task: attempt_local1675054463_0001_m_000005_0
+   [druid] 2019-01-23 14:01:07,535 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local1675054463_0001_m_000006_0
+   [druid] 2019-01-23 14:01:07,536 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 14:01:07,537 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 14:01:07,657 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@3a0e0898
+   [druid] 2019-01-23 14:01:07,663 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/qf-17.1548064299041.log:0+1575
+   [druid] 2019-01-23 14:01:07,687 [ask Executor #0] INFO  m.phone.etl.mr.EtlToHdfsMapper {1} - 输入：231输出：231过滤：0
+   [druid] 2019-01-23 14:01:07,689 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:01:07,720 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task:attempt_local1675054463_0001_m_000006_0 is done. And is in the process of committing
+   [druid] 2019-01-23 14:01:07,724 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:01:07,724 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task attempt_local1675054463_0001_m_000006_0 is allowed to commit now
+   [druid] 2019-01-23 14:01:07,733 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - Saved output of task 'attempt_local1675054463_0001_m_000006_0' to hdfs://min1:8020/ods/01/21/_temporary/0/task_local1675054463_0001_m_000006
+   [druid] 2019-01-23 14:01:07,734 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - map
+   [druid] 2019-01-23 14:01:07,734 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task 'attempt_local1675054463_0001_m_000006_0' done.
+   [druid] 2019-01-23 14:01:07,734 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Finishing task: attempt_local1675054463_0001_m_000006_0
+   [druid] 2019-01-23 14:01:07,734 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local1675054463_0001_m_000007_0
+   [druid] 2019-01-23 14:01:07,736 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 14:01:07,737 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 14:01:07,849 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@9b68b23
+   [druid] 2019-01-23 14:01:07,853 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/qf-17.1548064156123.log:0+1050
+   [druid] 2019-01-23 14:01:07,866 [ask Executor #0] INFO  m.phone.etl.mr.EtlToHdfsMapper {1} - 输入：233输出：233过滤：0
+   [druid] 2019-01-23 14:01:07,866 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:01:07,897 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task:attempt_local1675054463_0001_m_000007_0 is done. And is in the process of committing
+   [druid] 2019-01-23 14:01:07,901 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:01:07,901 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task attempt_local1675054463_0001_m_000007_0 is allowed to commit now
+   [druid] 2019-01-23 14:01:07,911 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - Saved output of task 'attempt_local1675054463_0001_m_000007_0' to hdfs://min1:8020/ods/01/21/_temporary/0/task_local1675054463_0001_m_000007
+   [druid] 2019-01-23 14:01:07,912 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - map
+   [druid] 2019-01-23 14:01:07,912 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task 'attempt_local1675054463_0001_m_000007_0' done.
+   [druid] 2019-01-23 14:01:07,912 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Finishing task: attempt_local1675054463_0001_m_000007_0
+   [druid] 2019-01-23 14:01:07,912 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local1675054463_0001_m_000008_0
+   [druid] 2019-01-23 14:01:07,914 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 14:01:07,916 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 14:01:08,047 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@100d0335
+   [druid] 2019-01-23 14:01:08,050 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/03:0+0
+   [druid] 2019-01-23 14:01:08,070 [Thread-4       ] INFO  e.hadoop.mapred.LocalJobRunner {1} - map task executor complete.
+   [druid] 2019-01-23 14:01:08,078 [Thread-4       ] WARN  e.hadoop.mapred.LocalJobRunner {1} - job_local1675054463_0001
+   java.lang.Exception: java.io.FileNotFoundException: Path is not a file: /logs/01/21/03
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:70)
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:56)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocationsInt(FSNamesystem.java:2094)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:2064)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:1977)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.getBlockLocations(NameNodeRpcServer.java:575)
+	at org.apache.hadoop.hdfs.server.namenode.AuthorizationProviderProxyClientProtocol.getBlockLocations(AuthorizationProviderProxyClientProtocol.java:92)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.getBlockLocations(ClientNamenodeProtocolServerSideTranslatorPB.java:376)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:617)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:1073)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2226)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2222)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1920)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2220)
+
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.runTasks(LocalJobRunner.java:462)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:522)
+Caused by: java.io.FileNotFoundException: Path is not a file: /logs/01/21/03
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:70)
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:56)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocationsInt(FSNamesystem.java:2094)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:2064)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:1977)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.getBlockLocations(NameNodeRpcServer.java:575)
+	at org.apache.hadoop.hdfs.server.namenode.AuthorizationProviderProxyClientProtocol.getBlockLocations(AuthorizationProviderProxyClientProtocol.java:92)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.getBlockLocations(ClientNamenodeProtocolServerSideTranslatorPB.java:376)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:617)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:1073)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2226)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2222)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1920)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2220)
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.apache.hadoop.ipc.RemoteException.instantiateException(RemoteException.java:106)
+	at org.apache.hadoop.ipc.RemoteException.unwrapRemoteException(RemoteException.java:73)
+	at org.apache.hadoop.hdfs.DFSClient.callGetBlockLocations(DFSClient.java:1242)
+	at org.apache.hadoop.hdfs.DFSClient.getLocatedBlocks(DFSClient.java:1227)
+	at org.apache.hadoop.hdfs.DFSClient.getLocatedBlocks(DFSClient.java:1215)
+	at org.apache.hadoop.hdfs.DFSInputStream.fetchLocatedBlocksAndGetLastBlockLength(DFSInputStream.java:303)
+	at org.apache.hadoop.hdfs.DFSInputStream.openInfo(DFSInputStream.java:269)
+	at org.apache.hadoop.hdfs.DFSInputStream.<init>(DFSInputStream.java:261)
+	at org.apache.hadoop.hdfs.DFSClient.open(DFSClient.java:1540)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$3.doCall(DistributedFileSystem.java:304)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$3.doCall(DistributedFileSystem.java:299)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.open(DistributedFileSystem.java:312)
+	at org.apache.hadoop.fs.FileSystem.open(FileSystem.java:767)
+	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.initialize(LineRecordReader.java:85)
+	at org.apache.hadoop.mapred.MapTask$NewTrackingRecordReader.initialize(MapTask.java:548)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:786)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.hadoop.ipc.RemoteException(java.io.FileNotFoundException): Path is not a file: /logs/01/21/03
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:70)
+	at org.apache.hadoop.hdfs.server.namenode.INodeFile.valueOf(INodeFile.java:56)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocationsInt(FSNamesystem.java:2094)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:2064)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getBlockLocations(FSNamesystem.java:1977)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.getBlockLocations(NameNodeRpcServer.java:575)
+	at org.apache.hadoop.hdfs.server.namenode.AuthorizationProviderProxyClientProtocol.getBlockLocations(AuthorizationProviderProxyClientProtocol.java:92)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.getBlockLocations(ClientNamenodeProtocolServerSideTranslatorPB.java:376)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:617)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:1073)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2226)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2222)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1920)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2220)
+
+	at org.apache.hadoop.ipc.Client.call(Client.java:1476)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1407)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Invoker.invoke(ProtobufRpcEngine.java:229)
+	at com.sun.proxy.$Proxy9.getBlockLocations(Unknown Source)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolTranslatorPB.getBlockLocations(ClientNamenodeProtocolTranslatorPB.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:187)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:102)
+	at com.sun.proxy.$Proxy10.getBlockLocations(Unknown Source)
+	at org.apache.hadoop.hdfs.DFSClient.callGetBlockLocations(DFSClient.java:1240)
+	... 21 more
+[druid] 2019-01-23 14:01:09,007 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} - Job job_local1675054463_0001 failed with state FAILED due to: NA
+   [druid] 2019-01-23 14:01:09,045 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} - Counters: 20
+	File System Counters
+		FILE: Number of bytes read=35024
+		FILE: Number of bytes written=2208976
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=648701
+		HDFS: Number of bytes written=57988
+		HDFS: Number of read operations=184
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=88
+	Map-Reduce Framework
+		Map input records=233
+		Map output records=233
+		Input split bytes=914
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=0
+		Total committed heap usage (bytes)=910163968
+	File Input Format Counters 
+		Bytes Read=100236
+	File Output Format Counters 
+		Bytes Written=8854
+   [druid] 2019-01-23 14:02:55,253 [main           ] INFO  conf.Configuration.deprecation {1} - session.id is deprecated. Instead, use dfs.metrics.session-id
+   [druid] 2019-01-23 14:02:55,255 [main           ] INFO  .hadoop.metrics.jvm.JvmMetrics {1} - Initializing JVM Metrics with processName=JobTracker, sessionId=
+   [druid] 2019-01-23 14:02:56,072 [main           ] WARN  .mapreduce.JobResourceUploader {1} - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+   [druid] 2019-01-23 14:02:56,151 [main           ] INFO  duce.lib.input.FileInputFormat {1} - Total input paths to process : 8
+   [druid] 2019-01-23 14:02:56,277 [main           ] INFO  .hadoop.mapreduce.JobSubmitter {1} - number of splits:8
+   [druid] 2019-01-23 14:02:56,413 [main           ] INFO  .hadoop.mapreduce.JobSubmitter {1} - Submitting tokens for job: job_local420016947_0001
+   [druid] 2019-01-23 14:02:56,701 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} - The url to track the job: http://localhost:8080/
+   [druid] 2019-01-23 14:02:56,702 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} - Running job: job_local420016947_0001
+   [druid] 2019-01-23 14:02:56,708 [Thread-4       ] INFO  e.hadoop.mapred.LocalJobRunner {1} - OutputCommitter set in config null
+   [druid] 2019-01-23 14:02:56,721 [Thread-4       ] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 14:02:56,725 [Thread-4       ] INFO  e.hadoop.mapred.LocalJobRunner {1} - OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+   [druid] 2019-01-23 14:02:56,824 [Thread-4       ] INFO  e.hadoop.mapred.LocalJobRunner {1} - Waiting for map tasks
+   [druid] 2019-01-23 14:02:56,826 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local420016947_0001_m_000000_0
+   [druid] 2019-01-23 14:02:56,876 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 14:02:56,887 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 14:02:57,006 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@69d0cae
+   [druid] 2019-01-23 14:02:57,015 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/2018-11-11-end.log:0+32947
+   [druid] 2019-01-23 14:02:57,638 [ask Executor #0] INFO  m.phone.etl.mr.EtlToHdfsMapper {1} - 输入：82输出：82过滤：0
+   [druid] 2019-01-23 14:02:57,643 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:02:57,706 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} - Job job_local420016947_0001 running in uber mode : false
+   [druid] 2019-01-23 14:02:57,708 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} -  map 0% reduce 0%
+   [druid] 2019-01-23 14:02:57,807 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task:attempt_local420016947_0001_m_000000_0 is done. And is in the process of committing
+   [druid] 2019-01-23 14:02:57,827 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:02:57,827 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task attempt_local420016947_0001_m_000000_0 is allowed to commit now
+   [druid] 2019-01-23 14:02:57,850 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - Saved output of task 'attempt_local420016947_0001_m_000000_0' to hdfs://min1:8020/ods/01/21/_temporary/0/task_local420016947_0001_m_000000
+   [druid] 2019-01-23 14:02:57,852 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - map
+   [druid] 2019-01-23 14:02:57,852 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task 'attempt_local420016947_0001_m_000000_0' done.
+   [druid] 2019-01-23 14:02:57,852 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Finishing task: attempt_local420016947_0001_m_000000_0
+   [druid] 2019-01-23 14:02:57,852 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local420016947_0001_m_000001_0
+   [druid] 2019-01-23 14:02:57,854 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 14:02:57,855 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 14:02:58,011 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@70cbe476
+   [druid] 2019-01-23 14:02:58,014 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/qf-17.1548064244531.log:0+30434
+   [druid] 2019-01-23 14:02:58,062 [ask Executor #0] INFO  m.phone.etl.mr.EtlToHdfsMapper {1} - 输入：144输出：144过滤：0
+   [druid] 2019-01-23 14:02:58,063 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:02:58,116 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task:attempt_local420016947_0001_m_000001_0 is done. And is in the process of committing
+   [druid] 2019-01-23 14:02:58,126 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:02:58,126 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task attempt_local420016947_0001_m_000001_0 is allowed to commit now
+   [druid] 2019-01-23 14:02:58,142 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - Saved output of task 'attempt_local420016947_0001_m_000001_0' to hdfs://min1:8020/ods/01/21/_temporary/0/task_local420016947_0001_m_000001
+   [druid] 2019-01-23 14:02:58,143 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - map
+   [druid] 2019-01-23 14:02:58,143 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task 'attempt_local420016947_0001_m_000001_0' done.
+   [druid] 2019-01-23 14:02:58,143 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Finishing task: attempt_local420016947_0001_m_000001_0
+   [druid] 2019-01-23 14:02:58,143 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local420016947_0001_m_000002_0
+   [druid] 2019-01-23 14:02:58,148 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 14:02:58,149 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 14:02:58,317 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@2fcb0adc
+   [druid] 2019-01-23 14:02:58,320 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/2018-11-12.log:0+14734
+   [druid] 2019-01-23 14:02:58,365 [ask Executor #0] INFO  m.phone.etl.mr.EtlToHdfsMapper {1} - 输入：189输出：189过滤：0
+   [druid] 2019-01-23 14:02:58,365 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:02:58,398 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task:attempt_local420016947_0001_m_000002_0 is done. And is in the process of committing
+   [druid] 2019-01-23 14:02:58,401 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:02:58,401 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task attempt_local420016947_0001_m_000002_0 is allowed to commit now
+   [druid] 2019-01-23 14:02:58,414 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - Saved output of task 'attempt_local420016947_0001_m_000002_0' to hdfs://min1:8020/ods/01/21/_temporary/0/task_local420016947_0001_m_000002
+   [druid] 2019-01-23 14:02:58,415 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - map
+   [druid] 2019-01-23 14:02:58,415 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task 'attempt_local420016947_0001_m_000002_0' done.
+   [druid] 2019-01-23 14:02:58,416 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Finishing task: attempt_local420016947_0001_m_000002_0
+   [druid] 2019-01-23 14:02:58,416 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local420016947_0001_m_000003_0
+   [druid] 2019-01-23 14:02:58,417 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 14:02:58,418 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 14:02:58,574 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@318cbe2b
+   [druid] 2019-01-23 14:02:58,580 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/qf-17.1548064200871.log:0+7187
+   [druid] 2019-01-23 14:02:58,632 [ask Executor #0] INFO  m.phone.etl.mr.EtlToHdfsMapper {1} - 输入：203输出：203过滤：0
+   [druid] 2019-01-23 14:02:58,633 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:02:58,664 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task:attempt_local420016947_0001_m_000003_0 is done. And is in the process of committing
+   [druid] 2019-01-23 14:02:58,668 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:02:58,669 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task attempt_local420016947_0001_m_000003_0 is allowed to commit now
+   [druid] 2019-01-23 14:02:58,678 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - Saved output of task 'attempt_local420016947_0001_m_000003_0' to hdfs://min1:8020/ods/01/21/_temporary/0/task_local420016947_0001_m_000003
+   [druid] 2019-01-23 14:02:58,679 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - map
+   [druid] 2019-01-23 14:02:58,680 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task 'attempt_local420016947_0001_m_000003_0' done.
+   [druid] 2019-01-23 14:02:58,680 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Finishing task: attempt_local420016947_0001_m_000003_0
+   [druid] 2019-01-23 14:02:58,680 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local420016947_0001_m_000004_0
+   [druid] 2019-01-23 14:02:58,682 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 14:02:58,682 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 14:02:58,711 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} -  map 100% reduce 0%
+   [druid] 2019-01-23 14:02:58,795 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@5e61c3aa
+   [druid] 2019-01-23 14:02:58,799 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/qf-17.1548064169931.log:0+6621
+   [druid] 2019-01-23 14:02:58,822 [ask Executor #0] INFO  m.phone.etl.mr.EtlToHdfsMapper {1} - 输入：216输出：216过滤：0
+   [druid] 2019-01-23 14:02:58,822 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:02:58,862 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task:attempt_local420016947_0001_m_000004_0 is done. And is in the process of committing
+   [druid] 2019-01-23 14:02:58,866 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:02:58,866 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task attempt_local420016947_0001_m_000004_0 is allowed to commit now
+   [druid] 2019-01-23 14:02:58,889 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - Saved output of task 'attempt_local420016947_0001_m_000004_0' to hdfs://min1:8020/ods/01/21/_temporary/0/task_local420016947_0001_m_000004
+   [druid] 2019-01-23 14:02:58,890 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - map
+   [druid] 2019-01-23 14:02:58,890 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task 'attempt_local420016947_0001_m_000004_0' done.
+   [druid] 2019-01-23 14:02:58,890 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Finishing task: attempt_local420016947_0001_m_000004_0
+   [druid] 2019-01-23 14:02:58,890 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local420016947_0001_m_000005_0
+   [druid] 2019-01-23 14:02:58,893 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 14:02:58,893 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 14:02:59,011 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@69839f95
+   [druid] 2019-01-23 14:02:59,018 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/qf-17.1548064093682.log:0+5688
+   [druid] 2019-01-23 14:02:59,051 [ask Executor #0] INFO  m.phone.etl.mr.EtlToHdfsMapper {1} - 输入：228输出：228过滤：0
+   [druid] 2019-01-23 14:02:59,051 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:02:59,083 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task:attempt_local420016947_0001_m_000005_0 is done. And is in the process of committing
+   [druid] 2019-01-23 14:02:59,090 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:02:59,090 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task attempt_local420016947_0001_m_000005_0 is allowed to commit now
+   [druid] 2019-01-23 14:02:59,101 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - Saved output of task 'attempt_local420016947_0001_m_000005_0' to hdfs://min1:8020/ods/01/21/_temporary/0/task_local420016947_0001_m_000005
+   [druid] 2019-01-23 14:02:59,101 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - map
+   [druid] 2019-01-23 14:02:59,102 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task 'attempt_local420016947_0001_m_000005_0' done.
+   [druid] 2019-01-23 14:02:59,102 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Finishing task: attempt_local420016947_0001_m_000005_0
+   [druid] 2019-01-23 14:02:59,102 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local420016947_0001_m_000006_0
+   [druid] 2019-01-23 14:02:59,103 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 14:02:59,104 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 14:02:59,229 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@18bea81e
+   [druid] 2019-01-23 14:02:59,232 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/qf-17.1548064299041.log:0+1575
+   [druid] 2019-01-23 14:02:59,270 [ask Executor #0] INFO  m.phone.etl.mr.EtlToHdfsMapper {1} - 输入：231输出：231过滤：0
+   [druid] 2019-01-23 14:02:59,271 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:02:59,306 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task:attempt_local420016947_0001_m_000006_0 is done. And is in the process of committing
+   [druid] 2019-01-23 14:02:59,310 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:02:59,310 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task attempt_local420016947_0001_m_000006_0 is allowed to commit now
+   [druid] 2019-01-23 14:02:59,320 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - Saved output of task 'attempt_local420016947_0001_m_000006_0' to hdfs://min1:8020/ods/01/21/_temporary/0/task_local420016947_0001_m_000006
+   [druid] 2019-01-23 14:02:59,321 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - map
+   [druid] 2019-01-23 14:02:59,321 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task 'attempt_local420016947_0001_m_000006_0' done.
+   [druid] 2019-01-23 14:02:59,321 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Finishing task: attempt_local420016947_0001_m_000006_0
+   [druid] 2019-01-23 14:02:59,322 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local420016947_0001_m_000007_0
+   [druid] 2019-01-23 14:02:59,324 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 14:02:59,324 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 14:02:59,437 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@672a201a
+   [druid] 2019-01-23 14:02:59,440 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/qf-17.1548064156123.log:0+1050
+   [druid] 2019-01-23 14:02:59,484 [ask Executor #0] INFO  m.phone.etl.mr.EtlToHdfsMapper {1} - 输入：233输出：233过滤：0
+   [druid] 2019-01-23 14:02:59,485 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:02:59,548 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task:attempt_local420016947_0001_m_000007_0 is done. And is in the process of committing
+   [druid] 2019-01-23 14:02:59,554 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - 
+   [druid] 2019-01-23 14:02:59,554 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task attempt_local420016947_0001_m_000007_0 is allowed to commit now
+   [druid] 2019-01-23 14:02:59,564 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - Saved output of task 'attempt_local420016947_0001_m_000007_0' to hdfs://min1:8020/ods/01/21/_temporary/0/task_local420016947_0001_m_000007
+   [druid] 2019-01-23 14:02:59,565 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - map
+   [druid] 2019-01-23 14:02:59,565 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} - Task 'attempt_local420016947_0001_m_000007_0' done.
+   [druid] 2019-01-23 14:02:59,565 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Finishing task: attempt_local420016947_0001_m_000007_0
+   [druid] 2019-01-23 14:02:59,565 [Thread-4       ] INFO  e.hadoop.mapred.LocalJobRunner {1} - map task executor complete.
+   [druid] 2019-01-23 14:03:00,713 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} - Job job_local420016947_0001 completed successfully
+   [druid] 2019-01-23 14:03:00,740 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} - Counters: 20
+	File System Counters
+		FILE: Number of bytes read=31564
+		FILE: Number of bytes written=2196448
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=648701
+		HDFS: Number of bytes written=57988
+		HDFS: Number of read operations=184
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=88
+	Map-Reduce Framework
+		Map input records=233
+		Map output records=233
+		Input split bytes=914
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=9
+		Total committed heap usage (bytes)=1392508928
+	File Input Format Counters 
+		Bytes Read=100236
+	File Output Format Counters 
+		Bytes Written=8854
+   [druid] 2019-01-23 21:53:01,415 [main           ] ERROR e.analysis.mr.nu.NewUserRunner {1} - 添加hdfs失败
+   java.lang.NullPointerException
+	at com.phone.analysis.mr.nu.NewUserRunner.setArgs(NewUserRunner.java:74)
+	at com.phone.analysis.mr.nu.NewUserRunner.run(NewUserRunner.java:39)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:70)
+	at com.phone.analysis.mr.nu.NewUserRunner.main(NewUserRunner.java:26)
+[druid] 2019-01-23 21:53:43,405 [main           ] ERROR e.analysis.mr.nu.NewUserRunner {1} - 添加hdfs失败
+   java.lang.NullPointerException
+	at com.phone.analysis.mr.nu.NewUserRunner.setArgs(NewUserRunner.java:74)
+	at com.phone.analysis.mr.nu.NewUserRunner.run(NewUserRunner.java:39)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:70)
+	at com.phone.analysis.mr.nu.NewUserRunner.main(NewUserRunner.java:26)
+[druid] 2019-01-23 22:02:45,841 [main           ] INFO  conf.Configuration.deprecation {1} - session.id is deprecated. Instead, use dfs.metrics.session-id
+   [druid] 2019-01-23 22:02:45,844 [main           ] INFO  .hadoop.metrics.jvm.JvmMetrics {1} - Initializing JVM Metrics with processName=JobTracker, sessionId=
+   [druid] 2019-01-23 22:03:59,851 [main           ] INFO  conf.Configuration.deprecation {1} - session.id is deprecated. Instead, use dfs.metrics.session-id
+   [druid] 2019-01-23 22:03:59,857 [main           ] INFO  .hadoop.metrics.jvm.JvmMetrics {1} - Initializing JVM Metrics with processName=JobTracker, sessionId=
+   [druid] 2019-01-23 22:04:01,363 [main           ] WARN  .mapreduce.JobResourceUploader {1} - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+   [druid] 2019-01-23 22:04:01,418 [main           ] WARN  .mapreduce.JobResourceUploader {1} - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+   [druid] 2019-01-23 22:04:01,441 [main           ] INFO  .hadoop.mapreduce.JobSubmitter {1} - Cleaning up the staging area file:/tmp/hadoop-admin/mapred/staging/admin1685210257/.staging/job_local1685210257_0001
+   [druid] 2019-01-23 22:05:48,914 [main           ] INFO  conf.Configuration.deprecation {1} - session.id is deprecated. Instead, use dfs.metrics.session-id
+   [druid] 2019-01-23 22:05:48,916 [main           ] INFO  .hadoop.metrics.jvm.JvmMetrics {1} - Initializing JVM Metrics with processName=JobTracker, sessionId=
+   [druid] 2019-01-23 22:05:50,337 [main           ] WARN  .mapreduce.JobResourceUploader {1} - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+   [druid] 2019-01-23 22:05:50,629 [main           ] WARN  .mapreduce.JobResourceUploader {1} - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+   [druid] 2019-01-23 22:05:50,659 [main           ] INFO  .hadoop.mapreduce.JobSubmitter {1} - Cleaning up the staging area file:/tmp/hadoop-admin/mapred/staging/admin1255801674/.staging/job_local1255801674_0001
+   [druid] 2019-01-23 22:06:43,415 [main           ] INFO  conf.Configuration.deprecation {1} - session.id is deprecated. Instead, use dfs.metrics.session-id
+   [druid] 2019-01-23 22:06:43,417 [main           ] INFO  .hadoop.metrics.jvm.JvmMetrics {1} - Initializing JVM Metrics with processName=JobTracker, sessionId=
+   [druid] 2019-01-23 22:06:44,309 [main           ] WARN  .mapreduce.JobResourceUploader {1} - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+   [druid] 2019-01-23 22:06:44,414 [main           ] WARN  .mapreduce.JobResourceUploader {1} - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+   [druid] 2019-01-23 22:06:44,707 [main           ] INFO  duce.lib.input.FileInputFormat {1} - Total input paths to process : 8
+   [druid] 2019-01-23 22:06:44,857 [main           ] INFO  .hadoop.mapreduce.JobSubmitter {1} - number of splits:8
+   [druid] 2019-01-23 22:06:45,228 [main           ] INFO  .hadoop.mapreduce.JobSubmitter {1} - Submitting tokens for job: job_local334939831_0001
+   [druid] 2019-01-23 22:06:45,683 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} - The url to track the job: http://localhost:8080/
+   [druid] 2019-01-23 22:06:45,687 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} - Running job: job_local334939831_0001
+   [druid] 2019-01-23 22:06:45,707 [Thread-3       ] INFO  e.hadoop.mapred.LocalJobRunner {1} - OutputCommitter set in config null
+   [druid] 2019-01-23 22:06:45,720 [Thread-3       ] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 22:06:45,723 [Thread-3       ] INFO  e.hadoop.mapred.LocalJobRunner {1} - OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+   [druid] 2019-01-23 22:06:45,902 [Thread-3       ] INFO  e.hadoop.mapred.LocalJobRunner {1} - Waiting for map tasks
+   [druid] 2019-01-23 22:06:45,903 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local334939831_0001_m_000000_0
+   [druid] 2019-01-23 22:06:46,032 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 22:06:46,054 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 22:06:46,517 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@4fb41e8c
+   [druid] 2019-01-23 22:06:46,530 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/2018-11-11-end.log:0+32947
+   [druid] 2019-01-23 22:06:46,693 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - (EQUATOR) 0 kvi 26214396(104857584)
+   [druid] 2019-01-23 22:06:46,694 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - mapreduce.task.io.sort.mb: 100
+   [druid] 2019-01-23 22:06:46,694 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - soft limit at 83886080
+   [druid] 2019-01-23 22:06:46,694 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - bufstart = 0; bufvoid = 104857600
+   [druid] 2019-01-23 22:06:46,694 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - kvstart = 26214396; length = 6553600
+   [druid] 2019-01-23 22:06:46,703 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+   [druid] 2019-01-23 22:06:46,714 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} - Job job_local334939831_0001 running in uber mode : false
+   [druid] 2019-01-23 22:06:46,748 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} -  map 0% reduce 0%
+   [druid] 2019-01-23 22:06:47,472 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Starting flush of map output
+   [druid] 2019-01-23 22:06:47,561 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local334939831_0001_m_000001_0
+   [druid] 2019-01-23 22:06:47,563 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 22:06:47,564 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 22:06:47,717 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@51fd01a
+   [druid] 2019-01-23 22:06:47,720 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/qf-17.1548064244531.log:0+30434
+   [druid] 2019-01-23 22:06:47,798 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - (EQUATOR) 0 kvi 26214396(104857584)
+   [druid] 2019-01-23 22:06:47,798 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - mapreduce.task.io.sort.mb: 100
+   [druid] 2019-01-23 22:06:47,798 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - soft limit at 83886080
+   [druid] 2019-01-23 22:06:47,798 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - bufstart = 0; bufvoid = 104857600
+   [druid] 2019-01-23 22:06:47,798 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - kvstart = 26214396; length = 6553600
+   [druid] 2019-01-23 22:06:47,800 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+   [druid] 2019-01-23 22:06:47,860 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Starting flush of map output
+   [druid] 2019-01-23 22:06:47,880 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local334939831_0001_m_000002_0
+   [druid] 2019-01-23 22:06:47,882 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 22:06:47,883 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 22:06:48,051 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@5321c8b1
+   [druid] 2019-01-23 22:06:48,054 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/2018-11-12.log:0+14734
+   [druid] 2019-01-23 22:06:48,138 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - (EQUATOR) 0 kvi 26214396(104857584)
+   [druid] 2019-01-23 22:06:48,139 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - mapreduce.task.io.sort.mb: 100
+   [druid] 2019-01-23 22:06:48,139 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - soft limit at 83886080
+   [druid] 2019-01-23 22:06:48,139 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - bufstart = 0; bufvoid = 104857600
+   [druid] 2019-01-23 22:06:48,139 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - kvstart = 26214396; length = 6553600
+   [druid] 2019-01-23 22:06:48,140 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+   [druid] 2019-01-23 22:06:48,151 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Starting flush of map output
+   [druid] 2019-01-23 22:06:48,178 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local334939831_0001_m_000003_0
+   [druid] 2019-01-23 22:06:48,179 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 22:06:48,180 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 22:06:48,350 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@1f08e3d9
+   [druid] 2019-01-23 22:06:48,353 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/qf-17.1548064200871.log:0+7187
+   [druid] 2019-01-23 22:06:48,468 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - (EQUATOR) 0 kvi 26214396(104857584)
+   [druid] 2019-01-23 22:06:48,468 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - mapreduce.task.io.sort.mb: 100
+   [druid] 2019-01-23 22:06:48,468 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - soft limit at 83886080
+   [druid] 2019-01-23 22:06:48,469 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - bufstart = 0; bufvoid = 104857600
+   [druid] 2019-01-23 22:06:48,469 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - kvstart = 26214396; length = 6553600
+   [druid] 2019-01-23 22:06:48,470 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+   [druid] 2019-01-23 22:06:48,481 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Starting flush of map output
+   [druid] 2019-01-23 22:06:48,519 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local334939831_0001_m_000004_0
+   [druid] 2019-01-23 22:06:48,521 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 22:06:48,522 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 22:06:48,914 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@65239889
+   [druid] 2019-01-23 22:06:48,918 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/qf-17.1548064169931.log:0+6621
+   [druid] 2019-01-23 22:06:49,093 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - (EQUATOR) 0 kvi 26214396(104857584)
+   [druid] 2019-01-23 22:06:49,101 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - mapreduce.task.io.sort.mb: 100
+   [druid] 2019-01-23 22:06:49,114 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - soft limit at 83886080
+   [druid] 2019-01-23 22:06:49,114 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - bufstart = 0; bufvoid = 104857600
+   [druid] 2019-01-23 22:06:49,114 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - kvstart = 26214396; length = 6553600
+   [druid] 2019-01-23 22:06:49,167 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+   [druid] 2019-01-23 22:06:49,250 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Starting flush of map output
+   [druid] 2019-01-23 22:06:49,283 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local334939831_0001_m_000005_0
+   [druid] 2019-01-23 22:06:49,284 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 22:06:49,285 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 22:06:49,548 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@101955f6
+   [druid] 2019-01-23 22:06:49,553 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/qf-17.1548064093682.log:0+5688
+   [druid] 2019-01-23 22:06:49,671 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - (EQUATOR) 0 kvi 26214396(104857584)
+   [druid] 2019-01-23 22:06:49,673 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - mapreduce.task.io.sort.mb: 100
+   [druid] 2019-01-23 22:06:49,673 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - soft limit at 83886080
+   [druid] 2019-01-23 22:06:49,675 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - bufstart = 0; bufvoid = 104857600
+   [druid] 2019-01-23 22:06:49,676 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - kvstart = 26214396; length = 6553600
+   [druid] 2019-01-23 22:06:49,680 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+   [druid] 2019-01-23 22:06:49,732 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Starting flush of map output
+   [druid] 2019-01-23 22:06:49,764 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local334939831_0001_m_000006_0
+   [druid] 2019-01-23 22:06:49,767 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 22:06:49,768 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 22:06:50,004 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@1d58e60f
+   [druid] 2019-01-23 22:06:50,008 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/qf-17.1548064299041.log:0+1575
+   [druid] 2019-01-23 22:06:50,147 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - (EQUATOR) 0 kvi 26214396(104857584)
+   [druid] 2019-01-23 22:06:50,147 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - mapreduce.task.io.sort.mb: 100
+   [druid] 2019-01-23 22:06:50,147 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - soft limit at 83886080
+   [druid] 2019-01-23 22:06:50,147 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - bufstart = 0; bufvoid = 104857600
+   [druid] 2019-01-23 22:06:50,147 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - kvstart = 26214396; length = 6553600
+   [druid] 2019-01-23 22:06:50,150 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+   [druid] 2019-01-23 22:06:50,170 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Starting flush of map output
+   [druid] 2019-01-23 22:06:50,200 [ask Executor #0] INFO  e.hadoop.mapred.LocalJobRunner {1} - Starting task: attempt_local334939831_0001_m_000007_0
+   [druid] 2019-01-23 22:06:50,201 [ask Executor #0] INFO  lib.output.FileOutputCommitter {1} - File Output Committer Algorithm version is 1
+   [druid] 2019-01-23 22:06:50,202 [ask Executor #0] INFO  rn.util.ProcfsBasedProcessTree {1} - ProcfsBasedProcessTree currently is supported only on Linux.
+   [druid] 2019-01-23 22:06:50,504 [ask Executor #0] INFO  org.apache.hadoop.mapred.Task  {1} -  Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@a6afcda
+   [druid] 2019-01-23 22:06:50,510 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Processing split: hdfs://min1:8020/logs/01/21/qf-17.1548064156123.log:0+1050
+   [druid] 2019-01-23 22:06:50,620 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - (EQUATOR) 0 kvi 26214396(104857584)
+   [druid] 2019-01-23 22:06:50,620 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - mapreduce.task.io.sort.mb: 100
+   [druid] 2019-01-23 22:06:50,620 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - soft limit at 83886080
+   [druid] 2019-01-23 22:06:50,620 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - bufstart = 0; bufvoid = 104857600
+   [druid] 2019-01-23 22:06:50,620 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - kvstart = 26214396; length = 6553600
+   [druid] 2019-01-23 22:06:50,624 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+   [druid] 2019-01-23 22:06:50,640 [ask Executor #0] INFO  g.apache.hadoop.mapred.MapTask {1} - Starting flush of map output
+   [druid] 2019-01-23 22:06:50,673 [Thread-3       ] INFO  e.hadoop.mapred.LocalJobRunner {1} - map task executor complete.
+   [druid] 2019-01-23 22:06:50,713 [Thread-3       ] WARN  e.hadoop.mapred.LocalJobRunner {1} - job_local334939831_0001
+   java.lang.Exception: java.lang.ArrayIndexOutOfBoundsException: 2
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.runTasks(LocalJobRunner.java:462)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:522)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 2
+	at com.phone.analysis.mr.nu.NewUserMapper.map(NewUserMapper.java:34)
+	at com.phone.analysis.mr.nu.NewUserMapper.map(NewUserMapper.java:20)
+	at org.apache.hadoop.mapreduce.Mapper.run(Mapper.java:146)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:787)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+[druid] 2019-01-23 22:06:50,766 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} - Job job_local334939831_0001 failed with state FAILED due to: NA
+   [druid] 2019-01-23 22:06:50,841 [main           ] INFO  rg.apache.hadoop.mapreduce.Job {1} - Counters: 0
+   
